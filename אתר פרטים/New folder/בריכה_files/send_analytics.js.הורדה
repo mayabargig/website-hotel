@@ -1,0 +1,339 @@
+
+document.cookie = "AC-C=ac-c;expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/;SameSite=Lax";
+var script_id1 = document.getElementById("panalytics");
+if (script_id1 !== "undefined" && script_id1 !== null) {
+  throw "error";
+}
+
+if (typeof campid === 'undefined') {
+  var campid = "none";
+}
+
+if (typeof campId !== "undefined") {
+  var campid = campId;
+}
+
+//var pdl = location.href;
+var pdl = window.location.href;
+
+pdl = pdl.replace("http://", "");
+pdl = pdl.replace("https://", "");
+var pdh = document.domain;
+var pdp = location.pathname;
+// //var pdt = encodeURI(document.title); 
+var pdt = document.title;
+var my_counter = 0;
+var readyState = "";
+
+
+var my_interval = setInterval(function () {
+
+  if (typeof window.__gaTracker !== "undefined") {
+    window.ga = window.__gaTracker;
+  }
+  else if (typeof __gaTracker !== "undefined") {
+    window.ga = __gaTracker;
+  }
+
+  if ((document.readyState === 'complete' && typeof window.ga !== "undefined") || readyState === 'complete') {
+    clearInterval(my_interval);
+
+    var script_id = document.getElementById("panalytics");
+    //console.log(script_id);
+    if (script_id !== "undefined" && script_id !== null) {
+      clearInterval(my_interval);
+      return false;
+    }
+
+    if (typeof service_dtl !== "undefined") // ???
+    {
+      var service_dtl = pdp;
+    }
+
+    var pua = navigator.userAgent;
+    //var pdr = document.referrer;
+    var pcm = getUrlVars()["utm_medium"];
+    var pcs = getUrlVars()["utm_source"];
+    var pcn = getUrlVars()["utm_campaign"];
+    var pck = getUrlVars()["utm_term"];
+    var pcc = getUrlVars()["utm_content"];
+    var domain = window.location.hostname;
+    // var pgclid = getUrlVars()["gclid"];
+    var fbclid = getUrlVars()["fbclid"];
+
+    //console.log("fbclid ="+fbclid);
+
+
+    //var pcid = window.ga.getAll()[0]['b']['data']['values'][':clientId'];
+    var pcid = window.ga.getAll()[0]['model']['data']['ea'][':clientId'];
+    var pgua = window.ga.getAll()[0]['model']['data']['ea'][':trackingId'];
+    var pgclid = window.ga.getAll()[0]['model']['data']['ea'][':_gclid'];
+    var pul = window.ga.getAll()[0]['model']['data']['ea'][':language'];
+    var pdr = window.ga.getAll()[0]['model']['data']['ea'][':referrer'];
+
+    var url = '//ws.callindex.co.il/campaign/ga_analytics_ws.js';
+    //var url    = '//analytics.callindex.co.il/campaign/ga_analytics_ws.js';
+    var error_flag = false;
+
+    var pkey1 = "";
+    var pkey2 = "";
+    var pnumbers = "";
+
+    if (typeof window.p1 === "undefined" || typeof window.p2 === "undefined") {
+
+
+      if (typeof window.ptoken !== 'undefined' && window.ptoken !== null && window.ptoken !== '' && typeof window.ptoken !== 'object') {
+        pkey1 = 0;
+        pkey2 = 0;
+        pnumbers = 0;
+        ptoken = window.ptoken;
+
+      }
+
+      else {
+        var ptoken = getPtoken();
+
+
+        if (typeof ptoken !== 'undefined') {
+          pkey1 = 0;
+          pkey2 = 0;
+          pnumbers = 0;
+        }
+        else {
+          error_flag = true;
+        }
+      }
+    }
+
+    else {
+
+      pkey1 = window.p1;
+      pkey2 = window.p2;
+      pnumbers = window.numbers;
+    }
+
+    if (error_flag === true) {
+      var analytics_error = "yes";
+    }
+
+    else if ((typeof pkey1 !== "undefined" && typeof pkey2 !== "undefined" && typeof pnumbers !== "undefined") || (typeof ptoken !== 'undefined' && ptoken !== null)) {
+      pdl = pdl.replace("#!", '');
+      pdl = pdl.replace(/&/g, '__');
+
+      //var new_url=url+'?domain=' + domain
+      var url_params = '?domain=' + domain
+        + '&pdh=' + pdh
+        + '&pdp=' + pdp
+        + '&pcid=' + pcid
+        + '&pdt=' + pdt
+        + '&pul=' + pul
+        + '&pdr=' + pdr
+        + '&p1=' + pkey1
+        + '&p2=' + pkey2
+        + '&pec=' + pnumbers
+        + '&pcm=' + pcm
+        + '&pcs=' + pcs
+        + '&pcn=' + pcn
+        + '&pck=' + pck
+        + '&pcc=' + pcc
+        + '&ptoken=' + ptoken
+        + '&campid=' + campid
+        + '&pdl=' + pdl
+        + '&pgua=' + pgua
+        + '&pgclid=' + pgclid
+        + '&pfbclid=' + fbclid;
+
+      if (typeof pparam !== "undefined") {
+        url_params = url_params + '&pparam=' + pparam;
+      }
+
+      var new_url = '';
+
+      var auto_pec
+      var number_regex = getPtokenName("number_regex");
+      var basicRegex = "";
+      if (number_regex) {
+        auto_pec = number_regex;
+        // var arrNumberRegex = number_regex.split(",")
+        // for (const item of arrNumberRegex) {
+        //   basicRegex += "(" + item + ")|"
+        // }
+        // basicRegex = basicRegex.slice(0, -1);
+        // basicRegex = new RegExp(basicRegex, "g")
+        // auto_pec = search_phone_num(basicRegex)
+        url_params += "&number_regex=true";
+      } else {
+        auto_pec = search_phone_num(/(\W)((\+?972|0)\W?7[1234679]\W?([0-9]\W?){6}[0-9])(\W)|((\W)(\+?972|0)\W?[23489]\W?[3-9]\W?([0-9]\W?){5}[0-9])(\W)|(\W)(\+?972|0)\W?(5[0123458]\W?([0-9]\W?){6}[0-9](\W))|(\W)(1700|180[01])\W?[0-9]{3}\W?[0-9]{3}(\W)/g);
+      }
+      url_params = url_params + "&auto_pec=" + auto_pec;
+      url_params = encodeURI(url_params);
+      new_url = url + url_params;
+      var script = document.createElement('script');
+      script.setAttribute("id", "panalytics");
+      //script.setAttribute("type", "application/javascript");
+      script.setAttribute("src", new_url);
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+
+
+    }
+  }
+  else {
+    if (typeof window.__gaTracker !== "undefined") {
+
+      window.ga = window.__gaTracker;
+    }
+    my_counter++;
+    if (my_counter > 200) {
+      clearInterval(my_interval);
+      console.log("NO GA OBJECT!");
+    }
+    else if (my_counter > 150) {
+      readyState = "complete";
+    }
+  }
+
+
+
+}, 100);
+
+
+function replace_num() {
+  var child = document.getElementById("panalytics");
+
+  if (typeof child !== null && typeof child !== "undefined") {
+    var src1 = child.src + "&replace=yes";
+
+    child.parentNode.removeChild(child);
+
+    var script = document.createElement('script');
+    script.setAttribute("id", "panalytics");
+    script.setAttribute("src", src1);
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  /* run function by calling : window.replace_num() */
+}
+//Get the get parameters      
+function getUrlVars() {
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+    vars[key] = value;
+  });
+  return vars;
+}
+
+function getPtoken() {
+  if (document.getElementById("ptoken") === null) {
+    return null;
+  }
+
+  var ptoken_url = document.getElementById("ptoken").src;
+  if (typeof ptoken_url !== 'undefined') {
+    var ptoken = ptoken_url.split("?")[1].split("=")[1];
+    return ptoken;
+  }
+
+  return null;
+}
+function getPtokenName() {
+  if (document.getElementById("ptoken") === null) {
+    return null;
+  }
+
+  var ptoken_url = document.getElementById("ptoken").src;
+  if (typeof ptoken_url !== 'undefined') {
+    var ptoken = ptoken_url.split("?")
+    ptoken = ptoken[1].split("&");
+    for (var i = 0; i < ptoken.length; i++) {
+      var tempToken = ptoken[i].split("=");
+      if (tempToken[0] == name) {
+        return tempToken[1];
+      }
+    }
+    return '';
+  }
+
+  return null;
+}
+
+function getCookie(name) {
+  var re = new RegExp(name + "=([^;]+)");
+  var value = re.exec(document.cookie);
+  return (value != null) ? unescape(value[1]) : null;
+}
+
+function setCookie(cname, cvalue, interval) {
+  var d = new Date();
+  d.setTime(d.getTime() + (interval * 60 * 1000));
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function update_Pelem(action, id) {
+  var domain = document.domain;
+  //var new_url = '//analytics.callindex.co.il/campaign/ga_analytics_update.js?action='+action+'&domain='+domain+'&id='+id;
+  var new_url = '//ws.callindex.co.il/campaign/ga_analytics_update.js?action=' + action + '&domain=' + domain + '&id=' + id;
+  var script = document.createElement('script');
+  script.setAttribute("type", "application/javascript");
+  script.setAttribute("src", new_url);
+  document.getElementsByTagName("head")[0].appendChild(script);
+
+  return true;
+}
+
+function keep_alive() {
+  var ts = Math.round((new Date()).getTime() / 1000);
+  var domain = document.domain;
+  //var new_url = '//analytics.callindex.co.il/campaign/ga_analytics_update.js?action=ping&domain='+domain;
+  var new_url = '//ws.callindex.co.il/campaign/ga_analytics_update.js?action=ping&domain=' + domain;
+  var script = document.createElement('script');
+  script.setAttribute("type", "application/javascript");
+  script.setAttribute("src", new_url);
+  script.setAttribute("id", "ping");
+
+  document.getElementsByTagName("head")[0].appendChild(script);
+  var child = document.getElementById("ping");
+  child.parentNode.removeChild(child);
+};
+
+function search_phone_num(Preg) {
+  var PsearchArray = new Array("a", "span", "strong", "h1", "h2", "h3", "h4", "h5", "h6", "h7", "p");
+  var PsearchArray_size = PsearchArray.length;
+  var Pelem = new Array();
+  var Pdelimiter, telArray_size;
+  var numbers_array = new Array();
+
+  for (var j = 0; j < PsearchArray_size; j++) {
+    Pdelimiter = PsearchArray[j];
+    Pelem = document.querySelectorAll(Pdelimiter);
+    telArray_size = Pelem.length;
+
+    for (var i = 0; i < telArray_size; i++) {
+      if (Pelem[i].outerHTML.search(Preg) == -1 || Pelem[i].outerHTML.search(/(fax|פקס)/ig) != -1) {
+        continue;
+      }
+      else {
+        var res = Pelem[i].outerHTML.match(Preg);
+        var num = res.toString();
+        num = num.replace(/[^0-9 ,]+/g, '');
+        num = num.replace(/,/g, " ");
+        num = num.trim();
+        var num_elem = num.split(" ");
+        for (var k = 0; k < num_elem.length; k++) {
+          if (num_elem[k].length < 9) {
+            continue;
+          }
+
+          if (numbers_array.indexOf(num_elem[k]) == -1) {
+            numbers_array.push(num_elem[k])
+          }
+        }
+      }
+    }
+  }
+  return numbers_array.join();
+}
+
+
+var pingIntervalId = setInterval(keep_alive, 300000);

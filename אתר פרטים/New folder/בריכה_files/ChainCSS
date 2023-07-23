@@ -1,0 +1,4469 @@
+/* === DEFAULT THEME CSS ====== */
+@charset "UTF-8";
+@font-face {
+  font-family: "FBPENELOPE-REGULAR";
+  font-display: swap;
+  src: url("fonts/fbpenelope-regularwebfont.woff") format("woff");
+}
+@font-face {
+  font-family: "FBPENELOPE-LIGHT";
+  font-display: swap;
+  src: url("fonts/FBPENELOPE-LIGHT.woff") format("woff");
+}
+@font-face {
+  font-family: "FBPENELOPE-BOLD";
+  font-display: swap;
+  src: url("fonts/FBPENELOPE-BOLD.woff") format("woff");
+}
+@font-face {
+  font-family: "Heebo-Regular";
+  font-display: swap;
+  src: url("fonts/Heebo-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Heebo-Bold";
+  font-display: swap;
+  src: url("fonts/Heebo-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Heebo-Medium";
+  font-display: swap;
+  src: url("fonts/Heebo-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Heebo-Light";
+  font-display: swap;
+  src: url("../fonts/Heebo-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Assistant-Regular";
+  src: url("../../fonts/Assistant-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RacingSansOne-Regular";
+  src: url("../../fonts/RacingSansOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url("../../fonts/Raleway-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Assistant-Bold";
+  src: url("../../fonts/Assistant-Bold.ttf") format("truetype"), url("../../fonts/Assistant-ExtraLight.ttf") format("truetype"), url("../../fonts/Assistant-Light.ttf") format("truetype"), url("../../fonts/Assistant-Regular.ttf") format("truetype"), url("../../fonts/Assistant-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Assistant-Light";
+  src: url("../../fonts/Assistant-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Assistant-SemiBold";
+  src: url("../../fonts/Assistant-SemiBold.ttf") format("truetype");
+}
+/*Layout Template*/
+:root {
+  /*#region ==================================== general color variables ======================================= */
+  /* colors*/
+  --main-color: #097BCE;
+  --reg-text-color: #000;
+  --footer-bg-color: #616161;
+  /* bootstrap vars */
+  --tooltip-bg: #111;
+  --tooltip-color: #fff;
+  --tooltip-opacity: 1;
+  --mobile-navbar-bg-color: #fff;
+  --mobile-currency-bg: transparent;
+  --mobile-currency-border: #9B9B9B;
+  --mobile-currency-font-color: #000;
+  --mobile-shopping-cart-bg: #fff;
+  --mobile_max_width: 992px;
+  --progress-bar-bg: #006050;
+  --top-strip-bg-color: #0874C2;
+  --compact-shopping-cart-bg: #FFF;
+  --compact-shopping-cart-book-btn-bg: #097bce;
+  --shopping-cart-bg: #EEEEEE;
+  --shopping-cart-color: #58585B;
+  --shopping-cart-rooms-title-bg: #00352c;
+  --shopping-cart-titles-color: #fff;
+  --shopping-cart-total-price-title-bg: var(--shopping-cart-rooms-title-bg);
+  --shopping-cart-total-price-color: #488000;
+  --shopping-cart-book-btn-bg: #097bce;
+  --shopping-cart-book-btn-border-color: #097bce;
+  --shopping-cart-book-btn-color: #fff;
+  --shopping-cart-disabled-book-btn-color: #616161;
+  --results-container-room-list-title-color: var(--shopping-cart-color);
+  --benefits-strip-bg: #EFEEEE;
+  --reg-page-shop-cart-bg-color: #fff;
+  --room-item-bg: var(--shopping-cart-color);
+  --room-font-color: var(--buttons-bg);
+  --room-expand-arrow-color: var(--shopping-cart-book-btn-bg);
+  --price-code-name-color: #097bce;
+  --price-plan-row-border-color: #c4c4c4;
+  --price-plan-row-title-bg: #efeeee;
+  --price-plan-row-title-color: #616161;
+  --beds-select-bg: #097bce;
+  --beds-select-color: #fff;
+  --personal-details-btn-bg: #097bce;
+  --carousel-control-prev-icon-bg: url("../../common/images/left-arrowB.svg");
+  --carousel-control-next-icon-bg: url("../../common/images/right-arrowB.svg");
+  --carousel-control-icon-width: 50px;
+  /*new vars*/
+  --cancel-btn: #696969;
+  --session-btn-bg: #0874C2;
+  --book-btn-background: #041a29;
+  --hotel-info-icons-color: #4AAFF7;
+  --room-price-color: #488000;
+  --room-hover-border-color: #333;
+  --comprasion-banner-bg: #f0efef;
+  --comprasion-banner-color: #333;
+  --filter-module-wrap-bg: rgba(250,250,250,0);
+  --align: right;
+  --alt-align: left;
+  --msg-box-bg: #d9ecf2;
+  --price-msg-holder-bg: #E8F5FA;
+  --back-to-rooms-btn-bg: #D9ECF2;
+  --back-to-rooms-btn-color: #4d4d4d;
+  --back-to-rooms-btn-border: 1px solid #939393;
+  --new-promo-bg: #333;
+  --new-promo-color: #fff;
+  --modal-bg-color: #333;
+  --modal-color: #333;
+}
+
+/*#region headings Hebrew Language */
+.rtl {
+  --align: right;
+  --alt-align: left;
+}
+
+/*#endregion Hebrew Language */
+/*#region headings ltr Languages */
+.ltr {
+  /*#region fonts vars */
+  --align: left;
+  --alt-align: right;
+  --font-light: "";
+  --font-regular: "ploni-regular-aaa";
+  --font-semibold: "ploni-demibold-aaa";
+  --font-bold: "";
+  /*#endregion fonts */
+  /*#region headings font sizes */
+  --h1-size: 2.063rem;
+  --h2-size: 1.75rem;
+  --h3-size: 1.25rem;
+  --h4-size: 1.25rem;
+  /*#endregion headings font sizes */
+  /*#region lines-height */
+  --h1-line-height: 2.75rem;
+  --h2-line-height: 2.25rem;
+  --h3-line-height: 1.75rem;
+  --h4-line-height: 1.625rem;
+  /*#endregion lines-height */
+  /*#region text font sizes */
+  --small: 0.938rem;
+  --medium: 1rem;
+  --large: 1.125rem;
+  --extra-large: 1.25rem;
+  /*#endregion text font sizes */
+  /*#region text lines-height*/
+  --large-line: 2.5rem;
+  --big-line: 1.5rem;
+  --medium-line: 1.313rem;
+  --small-line: 1rem;
+  /*#endregion text lines heights*/
+}
+
+/*#endregion ltr Languages */
+:root {
+  --engine-bg: transparent;
+  --selects-bg: #F0F0F0;
+  /* colors */
+  --daterangepicker-color: #000;
+  --top-room-ttl-color: #505050;
+  --hotels-select-bg: #fff;
+  --datepickerrange-inner-bg-color: #ffffff;
+  --summery-dates-color: #c6a138;
+  --daterangepicker-cell-bg-color: #fff;
+  --daterangepicker-start-date-bg-color: #097BCE;
+  --daterangepicker-end-date-bg-color: #D9ECF2;
+  --hotels-choose-window-header-discount-text-color: #097BCE;
+  --hotels-choose-window-header-text-color: #ffffff;
+  /*daterangepicker*/
+  --daterangepicker-width: 100%;
+  --daterangepicker-z-index: 1030;
+  --daterangepicker-border-radius: 0px;
+  /*Days Holder*/
+  --days-holder-font-size: 16px;
+  --days-holder-font-color: #616161;
+  --days-holder-bg-color: #ffffff;
+  --arrival-date-text-color: #0874C2;
+  --arrival-leave-text-font-size: 1rem;
+  /*Calendar*/
+  --daterangepicker-calendar-bg-color: #fff;
+  --dates-button-text-color: #616161;
+  --month-table-text-font-size: 18px;
+  --end-date-text-color: #333333;
+  --desktop-months-arrows-font-color: #616161;
+  --arrival-leave-bottom-border-color: #DEDEDE;
+  --toast-text-color: #fff;
+  --done-editing-button-text-color: #2f2f2f;
+  /*Mobile legend colors*/
+  --mobile-legend-bg-color: #F8F8F8;
+  --mobile-legend-holiday-mark-color: #009758;
+  --mobile-legend-special-deal-mark-color: #0874C2;
+  --legend-border-color: #dedede;
+  /*Calendar Cells*/
+  --calendar-date-sep-color: #C4C4C4;
+  --daterangepicker-cell-text-color: #616161;
+  --daterangepicker-cell-font-size: 16px;
+  --room-price-span-color: #7E7E7E;
+  --alert-message-toast-holiday-first-color: #E1681B;
+  --alert-message-toast-holiday-second-color: #097BCE;
+  --alert-message-toast-holiday-text-color: #fff;
+  --holiday-toast-bg-color: #0874c2;
+  /*Dropdowns*/
+  --daterangepicker-dropdown-z-index: calc(var(--daterangepicker-z-index) + 1);
+  --hotel-choosing-select-bg-color: #ffffff;
+  --hotel-choosing-select-text-color: #616161;
+  --hotel-choosing-border-color: #505050;
+  --hotel-choosing-text-color: #fff;
+  /*Controls*/
+  /*--daterangepicker-control-height: 30px;
+  --daterangepicker-control-line-height: var(--daterangepicker-control-height);
+  --daterangepicker-control-color: #555;
+  --daterangepicker-control-border-size: 1px;
+  --daterangepicker-control-border-color: var(--daterangepicker-border-color);
+  --daterangepicker-control-border-radius: 4px;
+  --daterangepicker-control-active-border-size: 1px;
+  --daterangepicker-control-active-border-color: var(--apply-bg-color);
+  --daterangepicker-control-active-border-radius: var(--daterangepicker-control-border-radius);
+  --daterangepicker-control-disabled-color: var(--daterangepicker-border-color);*/
+  /*Ranges*/
+  /*--daterangepicker-ranges-color: var(--month-name-color);
+  --daterangepicker-ranges-bg-color: var(--daterangepicker-in-range-bg-color);
+  --daterangepicker-ranges-border-size: 1px;
+  --daterangepicker-ranges-border-color: var(--daterangepicker-ranges-bg-color);
+  --daterangepicker-ranges-border-radius: var(--daterangepicker-border-radius);
+  --daterangepicker-ranges-hover-color: var(--summery-dates-color);
+  --daterangepicker-ranges-hover-bg-color: var(--daterangepicker-ranges-color);
+  --daterangepicker-ranges-hover-border-size: var(--daterangepicker-ranges-border-size);
+  --daterangepicker-ranges-hover-border-color: var(--daterangepicker-ranges-hover-bg-color);
+  --daterangepicker-ranges-hover-border-radius: var(--daterangepicker-border-radius);
+  --daterangepicker-ranges-active-border-size: var(--daterangepicker-ranges-border-size);
+  --daterangepicker-ranges-active-border-color: var(--daterangepicker-ranges-bg-color);
+  --daterangepicker-ranges-active-border-radius: var(--daterangepicker-border-radius);*/
+  /*engine*/
+  --search-button-color: #097BCE;
+  --search-button-text-color: #333333;
+  --mobile-search-button-height: 54px;
+  --mobile-search-button-radius: 6px;
+  --mobile-engine-background-color: #F5F5F5;
+  --engine-background-color: #F5F5F5;
+  --desktop-search-button-border-color: #333;
+  --desktop-search-button-text-color: #333;
+  --desktop-search-btn-font-size: 1rem;
+  --desktop-search-button-bg: transparent;
+  --desktop-search-button-radius: 6px;
+  --desktop-search-button-height: 54px;
+  /*rooms and paxs*/
+  --reset-button-color: #E1E1E1;
+  --rooms-paxs-button-text-color: #616161;
+  --rooms-paxs-button-bg-color: #ffffff;
+  --rooms-paxs-cancel-button-bg-color: #E1E1E1;
+  --rooms-paxs-border-top-color: #9B9B9B;
+  --rooms-paxs-room-title-color: #C4C4C4;
+  --search-button-bg: transparent;
+  --search-button-border-color: #333;
+  --search-btn-font-size: 1rem;
+  --done-edit-button-bg: #097BCE;
+  --club-pop-up-prices-bg: #FFFFFF;
+  --height-input-engeine: 54px;
+  --spacing-input-engeine-mobile:20px;
+}
+
+.daterangepicker, .simplex-main-engine-holder {
+  /* Boootstrap */
+  /* Boootstrap */
+}
+.daterangepicker :root, .simplex-main-engine-holder :root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1440px;
+  --breakpoint-xxxl: 1600px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.daterangepicker *,
+.daterangepicker *::before,
+.daterangepicker *::after, .simplex-main-engine-holder *,
+.simplex-main-engine-holder *::before,
+.simplex-main-engine-holder *::after {
+  box-sizing: border-box;
+}
+.daterangepicker html, .simplex-main-engine-holder html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.daterangepicker article, .daterangepicker aside, .daterangepicker figcaption, .daterangepicker figure, .daterangepicker footer, .daterangepicker header, .daterangepicker hgroup, .daterangepicker main, .daterangepicker nav, .daterangepicker section, .simplex-main-engine-holder article, .simplex-main-engine-holder aside, .simplex-main-engine-holder figcaption, .simplex-main-engine-holder figure, .simplex-main-engine-holder footer, .simplex-main-engine-holder header, .simplex-main-engine-holder hgroup, .simplex-main-engine-holder main, .simplex-main-engine-holder nav, .simplex-main-engine-holder section {
+  display: block;
+}
+.daterangepicker body, .simplex-main-engine-holder body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+.daterangepicker [tabindex="-1"]:focus, .simplex-main-engine-holder [tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+.daterangepicker hr, .simplex-main-engine-holder hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+.daterangepicker h1, .daterangepicker h2, .daterangepicker h3, .daterangepicker h4, .daterangepicker h5, .daterangepicker h6, .simplex-main-engine-holder h1, .simplex-main-engine-holder h2, .simplex-main-engine-holder h3, .simplex-main-engine-holder h4, .simplex-main-engine-holder h5, .simplex-main-engine-holder h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.daterangepicker p, .simplex-main-engine-holder p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.daterangepicker abbr[title],
+.daterangepicker abbr[data-original-title], .simplex-main-engine-holder abbr[title],
+.simplex-main-engine-holder abbr[data-original-title] {
+  text-decoration: underline;
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0;
+  text-decoration-skip-ink: none;
+}
+.daterangepicker address, .simplex-main-engine-holder address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+.daterangepicker ol,
+.daterangepicker ul,
+.daterangepicker dl, .simplex-main-engine-holder ol,
+.simplex-main-engine-holder ul,
+.simplex-main-engine-holder dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.daterangepicker ol ol,
+.daterangepicker ul ul,
+.daterangepicker ol ul,
+.daterangepicker ul ol, .simplex-main-engine-holder ol ol,
+.simplex-main-engine-holder ul ul,
+.simplex-main-engine-holder ol ul,
+.simplex-main-engine-holder ul ol {
+  margin-bottom: 0;
+}
+.daterangepicker dt, .simplex-main-engine-holder dt {
+  font-weight: 700;
+}
+.daterangepicker dd, .simplex-main-engine-holder dd {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+.daterangepicker blockquote, .simplex-main-engine-holder blockquote {
+  margin: 0 0 1rem;
+}
+.daterangepicker b,
+.daterangepicker strong, .simplex-main-engine-holder b,
+.simplex-main-engine-holder strong {
+  font-weight: bolder;
+}
+.daterangepicker small, .simplex-main-engine-holder small {
+  font-size: 80%;
+}
+.daterangepicker sub,
+.daterangepicker sup, .simplex-main-engine-holder sub,
+.simplex-main-engine-holder sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+.daterangepicker sub, .simplex-main-engine-holder sub {
+  bottom: -0.25em;
+}
+.daterangepicker sup, .simplex-main-engine-holder sup {
+  top: -0.5em;
+}
+.daterangepicker a, .simplex-main-engine-holder a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+.daterangepicker a:hover, .simplex-main-engine-holder a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+.daterangepicker a:not([href]):not([tabindex]), .simplex-main-engine-holder a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+.daterangepicker a:not([href]):not([tabindex]):hover, .daterangepicker a:not([href]):not([tabindex]):focus, .simplex-main-engine-holder a:not([href]):not([tabindex]):hover, .simplex-main-engine-holder a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+.daterangepicker a:not([href]):not([tabindex]):focus, .simplex-main-engine-holder a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+.daterangepicker pre,
+.daterangepicker code,
+.daterangepicker kbd,
+.daterangepicker samp, .simplex-main-engine-holder pre,
+.simplex-main-engine-holder code,
+.simplex-main-engine-holder kbd,
+.simplex-main-engine-holder samp {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1em;
+}
+.daterangepicker pre, .simplex-main-engine-holder pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+}
+.daterangepicker figure, .simplex-main-engine-holder figure {
+  margin: 0 0 1rem;
+}
+.daterangepicker img, .simplex-main-engine-holder img {
+  vertical-align: middle;
+  border-style: none;
+}
+.daterangepicker svg, .simplex-main-engine-holder svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+.daterangepicker table, .simplex-main-engine-holder table {
+  border-collapse: collapse;
+}
+.daterangepicker caption, .simplex-main-engine-holder caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #6c757d;
+  text-align: left;
+  caption-side: bottom;
+}
+.daterangepicker th, .simplex-main-engine-holder th {
+  text-align: inherit;
+}
+.daterangepicker label, .simplex-main-engine-holder label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+.daterangepicker button, .simplex-main-engine-holder button {
+  border-radius: 0;
+}
+.daterangepicker button:focus, .simplex-main-engine-holder button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+.daterangepicker input,
+.daterangepicker button,
+.daterangepicker select,
+.daterangepicker optgroup,
+.daterangepicker textarea, .simplex-main-engine-holder input,
+.simplex-main-engine-holder button,
+.simplex-main-engine-holder select,
+.simplex-main-engine-holder optgroup,
+.simplex-main-engine-holder textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.daterangepicker button,
+.daterangepicker input, .simplex-main-engine-holder button,
+.simplex-main-engine-holder input {
+  overflow: visible;
+}
+.daterangepicker button,
+.daterangepicker select, .simplex-main-engine-holder button,
+.simplex-main-engine-holder select {
+  text-transform: none;
+}
+.daterangepicker select, .simplex-main-engine-holder select {
+  word-wrap: normal;
+}
+.daterangepicker button,
+.daterangepicker [type=button],
+.daterangepicker [type=reset],
+.daterangepicker [type=submit], .simplex-main-engine-holder button,
+.simplex-main-engine-holder [type=button],
+.simplex-main-engine-holder [type=reset],
+.simplex-main-engine-holder [type=submit] {
+  -webkit-appearance: button;
+}
+.daterangepicker button:not(:disabled),
+.daterangepicker [type=button]:not(:disabled),
+.daterangepicker [type=reset]:not(:disabled),
+.daterangepicker [type=submit]:not(:disabled), .simplex-main-engine-holder button:not(:disabled),
+.simplex-main-engine-holder [type=button]:not(:disabled),
+.simplex-main-engine-holder [type=reset]:not(:disabled),
+.simplex-main-engine-holder [type=submit]:not(:disabled) {
+  cursor: pointer;
+}
+.daterangepicker button::-moz-focus-inner,
+.daterangepicker [type=button]::-moz-focus-inner,
+.daterangepicker [type=reset]::-moz-focus-inner,
+.daterangepicker [type=submit]::-moz-focus-inner, .simplex-main-engine-holder button::-moz-focus-inner,
+.simplex-main-engine-holder [type=button]::-moz-focus-inner,
+.simplex-main-engine-holder [type=reset]::-moz-focus-inner,
+.simplex-main-engine-holder [type=submit]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+.daterangepicker input[type=radio],
+.daterangepicker input[type=checkbox], .simplex-main-engine-holder input[type=radio],
+.simplex-main-engine-holder input[type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+.daterangepicker input[type=date],
+.daterangepicker input[type=time],
+.daterangepicker input[type=datetime-local],
+.daterangepicker input[type=month], .simplex-main-engine-holder input[type=date],
+.simplex-main-engine-holder input[type=time],
+.simplex-main-engine-holder input[type=datetime-local],
+.simplex-main-engine-holder input[type=month] {
+  -webkit-appearance: listbox;
+}
+.daterangepicker textarea, .simplex-main-engine-holder textarea {
+  overflow: auto;
+  resize: vertical;
+}
+.daterangepicker fieldset, .simplex-main-engine-holder fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.daterangepicker legend, .simplex-main-engine-holder legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
+}
+.daterangepicker progress, .simplex-main-engine-holder progress {
+  vertical-align: baseline;
+}
+.daterangepicker [type=number]::-webkit-inner-spin-button,
+.daterangepicker [type=number]::-webkit-outer-spin-button, .simplex-main-engine-holder [type=number]::-webkit-inner-spin-button,
+.simplex-main-engine-holder [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+.daterangepicker [type=search], .simplex-main-engine-holder [type=search] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+.daterangepicker [type=search]::-webkit-search-decoration, .simplex-main-engine-holder [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+.daterangepicker ::-webkit-file-upload-button, .simplex-main-engine-holder ::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+.daterangepicker output, .simplex-main-engine-holder output {
+  display: inline-block;
+}
+.daterangepicker summary, .simplex-main-engine-holder summary {
+  display: list-item;
+  cursor: pointer;
+}
+.daterangepicker template, .simplex-main-engine-holder template {
+  display: none;
+}
+.daterangepicker [hidden], .simplex-main-engine-holder [hidden] {
+  display: none !important;
+}
+.daterangepicker .container, .simplex-main-engine-holder .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .daterangepicker .container, .simplex-main-engine-holder .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .daterangepicker .container, .simplex-main-engine-holder .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .daterangepicker .container, .simplex-main-engine-holder .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .daterangepicker .container, .simplex-main-engine-holder .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1440px) {
+  .daterangepicker .container, .simplex-main-engine-holder .container {
+    max-width: 1340px;
+  }
+}
+@media (min-width: 1600px) {
+  .daterangepicker .container, .simplex-main-engine-holder .container {
+    max-width: 1480px;
+  }
+}
+.daterangepicker .container-fluid, .simplex-main-engine-holder .container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.daterangepicker .row, .simplex-main-engine-holder .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.daterangepicker .no-gutters, .simplex-main-engine-holder .no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.daterangepicker .no-gutters > .col,
+.daterangepicker .no-gutters > [class*=col-], .simplex-main-engine-holder .no-gutters > .col,
+.simplex-main-engine-holder .no-gutters > [class*=col-] {
+  padding-right: 0;
+  padding-left: 0;
+}
+.daterangepicker .col-xxxl,
+.daterangepicker .col-xxxl-auto, .daterangepicker .simplex-main-engine-holder .col-xxxl, .simplex-main-engine-holder .daterangepicker .col-xxxl,
+.daterangepicker .simplex-main-engine-holder .col-xxxl-auto,
+.simplex-main-engine-holder .daterangepicker .col-xxxl-auto, .daterangepicker .col-xxxl-12, .daterangepicker .simplex-main-engine-holder .col-xxxl-12, .simplex-main-engine-holder .daterangepicker .col-xxxl-12, .daterangepicker .col-xxxl-11, .daterangepicker .simplex-main-engine-holder .col-xxxl-11, .simplex-main-engine-holder .daterangepicker .col-xxxl-11, .daterangepicker .col-xxxl-10, .daterangepicker .simplex-main-engine-holder .col-xxxl-10, .simplex-main-engine-holder .daterangepicker .col-xxxl-10, .daterangepicker .col-xxxl-9, .daterangepicker .simplex-main-engine-holder .col-xxxl-9, .simplex-main-engine-holder .daterangepicker .col-xxxl-9, .daterangepicker .col-xxxl-8, .daterangepicker .simplex-main-engine-holder .col-xxxl-8, .simplex-main-engine-holder .daterangepicker .col-xxxl-8, .daterangepicker .col-xxxl-7, .daterangepicker .simplex-main-engine-holder .col-xxxl-7, .simplex-main-engine-holder .daterangepicker .col-xxxl-7, .daterangepicker .col-xxxl-6, .daterangepicker .simplex-main-engine-holder .col-xxxl-6, .simplex-main-engine-holder .daterangepicker .col-xxxl-6, .daterangepicker .col-xxxl-5, .daterangepicker .simplex-main-engine-holder .col-xxxl-5, .simplex-main-engine-holder .daterangepicker .col-xxxl-5, .daterangepicker .col-xxxl-4, .daterangepicker .simplex-main-engine-holder .col-xxxl-4, .simplex-main-engine-holder .daterangepicker .col-xxxl-4, .daterangepicker .col-xxxl-3, .daterangepicker .simplex-main-engine-holder .col-xxxl-3, .simplex-main-engine-holder .daterangepicker .col-xxxl-3, .daterangepicker .col-xxxl-2, .daterangepicker .simplex-main-engine-holder .col-xxxl-2, .simplex-main-engine-holder .daterangepicker .col-xxxl-2, .daterangepicker .col-xxxl-1, .daterangepicker .simplex-main-engine-holder .col-xxxl-1, .simplex-main-engine-holder .daterangepicker .col-xxxl-1, .daterangepicker .col-xxl,
+.daterangepicker .col-xxl-auto, .daterangepicker .simplex-main-engine-holder .col-xxl, .simplex-main-engine-holder .daterangepicker .col-xxl,
+.daterangepicker .simplex-main-engine-holder .col-xxl-auto,
+.simplex-main-engine-holder .daterangepicker .col-xxl-auto, .daterangepicker .col-xxl-12, .daterangepicker .simplex-main-engine-holder .col-xxl-12, .simplex-main-engine-holder .daterangepicker .col-xxl-12, .daterangepicker .col-xxl-11, .daterangepicker .simplex-main-engine-holder .col-xxl-11, .simplex-main-engine-holder .daterangepicker .col-xxl-11, .daterangepicker .col-xxl-10, .daterangepicker .simplex-main-engine-holder .col-xxl-10, .simplex-main-engine-holder .daterangepicker .col-xxl-10, .daterangepicker .col-xxl-9, .daterangepicker .simplex-main-engine-holder .col-xxl-9, .simplex-main-engine-holder .daterangepicker .col-xxl-9, .daterangepicker .col-xxl-8, .daterangepicker .simplex-main-engine-holder .col-xxl-8, .simplex-main-engine-holder .daterangepicker .col-xxl-8, .daterangepicker .col-xxl-7, .daterangepicker .simplex-main-engine-holder .col-xxl-7, .simplex-main-engine-holder .daterangepicker .col-xxl-7, .daterangepicker .col-xxl-6, .daterangepicker .simplex-main-engine-holder .col-xxl-6, .simplex-main-engine-holder .daterangepicker .col-xxl-6, .daterangepicker .col-xxl-5, .daterangepicker .simplex-main-engine-holder .col-xxl-5, .simplex-main-engine-holder .daterangepicker .col-xxl-5, .daterangepicker .col-xxl-4, .daterangepicker .simplex-main-engine-holder .col-xxl-4, .simplex-main-engine-holder .daterangepicker .col-xxl-4, .daterangepicker .col-xxl-3, .daterangepicker .simplex-main-engine-holder .col-xxl-3, .simplex-main-engine-holder .daterangepicker .col-xxl-3, .daterangepicker .col-xxl-2, .daterangepicker .simplex-main-engine-holder .col-xxl-2, .simplex-main-engine-holder .daterangepicker .col-xxl-2, .daterangepicker .col-xxl-1, .daterangepicker .simplex-main-engine-holder .col-xxl-1, .simplex-main-engine-holder .daterangepicker .col-xxl-1, .daterangepicker .col-xl,
+.daterangepicker .col-xl-auto, .daterangepicker .simplex-main-engine-holder .col-xl, .simplex-main-engine-holder .daterangepicker .col-xl,
+.daterangepicker .simplex-main-engine-holder .col-xl-auto,
+.simplex-main-engine-holder .daterangepicker .col-xl-auto, .daterangepicker .col-xl-12, .daterangepicker .simplex-main-engine-holder .col-xl-12, .simplex-main-engine-holder .daterangepicker .col-xl-12, .daterangepicker .col-xl-11, .daterangepicker .simplex-main-engine-holder .col-xl-11, .simplex-main-engine-holder .daterangepicker .col-xl-11, .daterangepicker .col-xl-10, .daterangepicker .simplex-main-engine-holder .col-xl-10, .simplex-main-engine-holder .daterangepicker .col-xl-10, .daterangepicker .col-xl-9, .daterangepicker .simplex-main-engine-holder .col-xl-9, .simplex-main-engine-holder .daterangepicker .col-xl-9, .daterangepicker .col-xl-8, .daterangepicker .simplex-main-engine-holder .col-xl-8, .simplex-main-engine-holder .daterangepicker .col-xl-8, .daterangepicker .col-xl-7, .daterangepicker .simplex-main-engine-holder .col-xl-7, .simplex-main-engine-holder .daterangepicker .col-xl-7, .daterangepicker .col-xl-6, .daterangepicker .simplex-main-engine-holder .col-xl-6, .simplex-main-engine-holder .daterangepicker .col-xl-6, .daterangepicker .col-xl-5, .daterangepicker .simplex-main-engine-holder .col-xl-5, .simplex-main-engine-holder .daterangepicker .col-xl-5, .daterangepicker .col-xl-4, .daterangepicker .simplex-main-engine-holder .col-xl-4, .simplex-main-engine-holder .daterangepicker .col-xl-4, .daterangepicker .col-xl-3, .daterangepicker .simplex-main-engine-holder .col-xl-3, .simplex-main-engine-holder .daterangepicker .col-xl-3, .daterangepicker .col-xl-2, .daterangepicker .simplex-main-engine-holder .col-xl-2, .simplex-main-engine-holder .daterangepicker .col-xl-2, .daterangepicker .col-xl-1, .daterangepicker .simplex-main-engine-holder .col-xl-1, .simplex-main-engine-holder .daterangepicker .col-xl-1, .daterangepicker .col-lg,
+.daterangepicker .col-lg-auto, .daterangepicker .simplex-main-engine-holder .col-lg, .simplex-main-engine-holder .daterangepicker .col-lg,
+.daterangepicker .simplex-main-engine-holder .col-lg-auto,
+.simplex-main-engine-holder .daterangepicker .col-lg-auto, .daterangepicker .col-lg-12, .daterangepicker .simplex-main-engine-holder .col-lg-12, .simplex-main-engine-holder .daterangepicker .col-lg-12, .daterangepicker .col-lg-11, .daterangepicker .simplex-main-engine-holder .col-lg-11, .simplex-main-engine-holder .daterangepicker .col-lg-11, .daterangepicker .col-lg-10, .daterangepicker .simplex-main-engine-holder .col-lg-10, .simplex-main-engine-holder .daterangepicker .col-lg-10, .daterangepicker .col-lg-9, .daterangepicker .simplex-main-engine-holder .col-lg-9, .simplex-main-engine-holder .daterangepicker .col-lg-9, .daterangepicker .col-lg-8, .daterangepicker .simplex-main-engine-holder .col-lg-8, .simplex-main-engine-holder .daterangepicker .col-lg-8, .daterangepicker .col-lg-7, .daterangepicker .simplex-main-engine-holder .col-lg-7, .simplex-main-engine-holder .daterangepicker .col-lg-7, .daterangepicker .col-lg-6, .daterangepicker .simplex-main-engine-holder .col-lg-6, .simplex-main-engine-holder .daterangepicker .col-lg-6, .daterangepicker .col-lg-5, .daterangepicker .col-lg-4, .daterangepicker .col-lg-3, .daterangepicker .col-lg-2, .daterangepicker .col-lg-1, .daterangepicker .col-md,
+.daterangepicker .col-md-auto, .daterangepicker .col-md-12, .daterangepicker .col-md-11, .daterangepicker .col-md-10, .daterangepicker .col-md-9, .daterangepicker .col-md-8, .daterangepicker .col-md-7, .daterangepicker .col-md-6, .daterangepicker .col-md-5, .daterangepicker .col-md-4, .daterangepicker .col-md-3, .daterangepicker .col-md-2, .daterangepicker .col-md-1, .daterangepicker .col-sm,
+.daterangepicker .col-sm-auto, .daterangepicker .col-sm-12, .daterangepicker .col-sm-11, .daterangepicker .col-sm-10, .daterangepicker .col-sm-9, .daterangepicker .col-sm-8, .daterangepicker .col-sm-7, .daterangepicker .col-sm-6, .daterangepicker .col-sm-5, .daterangepicker .col-sm-4, .daterangepicker .col-sm-3, .daterangepicker .col-sm-2, .daterangepicker .col-sm-1, .daterangepicker .col,
+.daterangepicker .col-auto, .daterangepicker .col-12, .daterangepicker .col-11, .daterangepicker .col-10, .daterangepicker .col-9, .daterangepicker .col-8, .daterangepicker .col-7, .daterangepicker .col-6, .daterangepicker .col-5, .daterangepicker .col-4, .daterangepicker .col-3, .daterangepicker .col-2, .daterangepicker .col-1, .simplex-main-engine-holder .daterangepicker .col-xxxl, .daterangepicker .simplex-main-engine-holder .col-xxxl,
+.simplex-main-engine-holder .daterangepicker .col-xxxl-auto,
+.daterangepicker .simplex-main-engine-holder .col-xxxl-auto, .simplex-main-engine-holder .col-xxxl,
+.simplex-main-engine-holder .col-xxxl-auto, .simplex-main-engine-holder .daterangepicker .col-xxxl-12, .daterangepicker .simplex-main-engine-holder .col-xxxl-12, .simplex-main-engine-holder .col-xxxl-12, .simplex-main-engine-holder .daterangepicker .col-xxxl-11, .daterangepicker .simplex-main-engine-holder .col-xxxl-11, .simplex-main-engine-holder .col-xxxl-11, .simplex-main-engine-holder .daterangepicker .col-xxxl-10, .daterangepicker .simplex-main-engine-holder .col-xxxl-10, .simplex-main-engine-holder .col-xxxl-10, .simplex-main-engine-holder .daterangepicker .col-xxxl-9, .daterangepicker .simplex-main-engine-holder .col-xxxl-9, .simplex-main-engine-holder .col-xxxl-9, .simplex-main-engine-holder .daterangepicker .col-xxxl-8, .daterangepicker .simplex-main-engine-holder .col-xxxl-8, .simplex-main-engine-holder .col-xxxl-8, .simplex-main-engine-holder .daterangepicker .col-xxxl-7, .daterangepicker .simplex-main-engine-holder .col-xxxl-7, .simplex-main-engine-holder .col-xxxl-7, .simplex-main-engine-holder .daterangepicker .col-xxxl-6, .daterangepicker .simplex-main-engine-holder .col-xxxl-6, .simplex-main-engine-holder .col-xxxl-6, .simplex-main-engine-holder .daterangepicker .col-xxxl-5, .daterangepicker .simplex-main-engine-holder .col-xxxl-5, .simplex-main-engine-holder .col-xxxl-5, .simplex-main-engine-holder .daterangepicker .col-xxxl-4, .daterangepicker .simplex-main-engine-holder .col-xxxl-4, .simplex-main-engine-holder .col-xxxl-4, .simplex-main-engine-holder .daterangepicker .col-xxxl-3, .daterangepicker .simplex-main-engine-holder .col-xxxl-3, .simplex-main-engine-holder .col-xxxl-3, .simplex-main-engine-holder .daterangepicker .col-xxxl-2, .daterangepicker .simplex-main-engine-holder .col-xxxl-2, .simplex-main-engine-holder .col-xxxl-2, .simplex-main-engine-holder .daterangepicker .col-xxxl-1, .daterangepicker .simplex-main-engine-holder .col-xxxl-1, .simplex-main-engine-holder .col-xxxl-1, .simplex-main-engine-holder .daterangepicker .col-xxl, .daterangepicker .simplex-main-engine-holder .col-xxl,
+.simplex-main-engine-holder .daterangepicker .col-xxl-auto,
+.daterangepicker .simplex-main-engine-holder .col-xxl-auto, .simplex-main-engine-holder .col-xxl,
+.simplex-main-engine-holder .col-xxl-auto, .simplex-main-engine-holder .daterangepicker .col-xxl-12, .daterangepicker .simplex-main-engine-holder .col-xxl-12, .simplex-main-engine-holder .col-xxl-12, .simplex-main-engine-holder .daterangepicker .col-xxl-11, .daterangepicker .simplex-main-engine-holder .col-xxl-11, .simplex-main-engine-holder .col-xxl-11, .simplex-main-engine-holder .daterangepicker .col-xxl-10, .daterangepicker .simplex-main-engine-holder .col-xxl-10, .simplex-main-engine-holder .col-xxl-10, .simplex-main-engine-holder .daterangepicker .col-xxl-9, .daterangepicker .simplex-main-engine-holder .col-xxl-9, .simplex-main-engine-holder .col-xxl-9, .simplex-main-engine-holder .daterangepicker .col-xxl-8, .daterangepicker .simplex-main-engine-holder .col-xxl-8, .simplex-main-engine-holder .col-xxl-8, .simplex-main-engine-holder .daterangepicker .col-xxl-7, .daterangepicker .simplex-main-engine-holder .col-xxl-7, .simplex-main-engine-holder .col-xxl-7, .simplex-main-engine-holder .daterangepicker .col-xxl-6, .daterangepicker .simplex-main-engine-holder .col-xxl-6, .simplex-main-engine-holder .col-xxl-6, .simplex-main-engine-holder .daterangepicker .col-xxl-5, .daterangepicker .simplex-main-engine-holder .col-xxl-5, .simplex-main-engine-holder .col-xxl-5, .simplex-main-engine-holder .daterangepicker .col-xxl-4, .daterangepicker .simplex-main-engine-holder .col-xxl-4, .simplex-main-engine-holder .col-xxl-4, .simplex-main-engine-holder .daterangepicker .col-xxl-3, .daterangepicker .simplex-main-engine-holder .col-xxl-3, .simplex-main-engine-holder .col-xxl-3, .simplex-main-engine-holder .daterangepicker .col-xxl-2, .daterangepicker .simplex-main-engine-holder .col-xxl-2, .simplex-main-engine-holder .col-xxl-2, .simplex-main-engine-holder .daterangepicker .col-xxl-1, .daterangepicker .simplex-main-engine-holder .col-xxl-1, .simplex-main-engine-holder .col-xxl-1, .simplex-main-engine-holder .daterangepicker .col-xl, .daterangepicker .simplex-main-engine-holder .col-xl,
+.simplex-main-engine-holder .daterangepicker .col-xl-auto,
+.daterangepicker .simplex-main-engine-holder .col-xl-auto, .simplex-main-engine-holder .col-xl,
+.simplex-main-engine-holder .col-xl-auto, .simplex-main-engine-holder .daterangepicker .col-xl-12, .daterangepicker .simplex-main-engine-holder .col-xl-12, .simplex-main-engine-holder .col-xl-12, .simplex-main-engine-holder .daterangepicker .col-xl-11, .daterangepicker .simplex-main-engine-holder .col-xl-11, .simplex-main-engine-holder .col-xl-11, .simplex-main-engine-holder .daterangepicker .col-xl-10, .daterangepicker .simplex-main-engine-holder .col-xl-10, .simplex-main-engine-holder .col-xl-10, .simplex-main-engine-holder .daterangepicker .col-xl-9, .daterangepicker .simplex-main-engine-holder .col-xl-9, .simplex-main-engine-holder .col-xl-9, .simplex-main-engine-holder .daterangepicker .col-xl-8, .daterangepicker .simplex-main-engine-holder .col-xl-8, .simplex-main-engine-holder .col-xl-8, .simplex-main-engine-holder .daterangepicker .col-xl-7, .daterangepicker .simplex-main-engine-holder .col-xl-7, .simplex-main-engine-holder .col-xl-7, .simplex-main-engine-holder .daterangepicker .col-xl-6, .daterangepicker .simplex-main-engine-holder .col-xl-6, .simplex-main-engine-holder .col-xl-6, .simplex-main-engine-holder .daterangepicker .col-xl-5, .daterangepicker .simplex-main-engine-holder .col-xl-5, .simplex-main-engine-holder .col-xl-5, .simplex-main-engine-holder .daterangepicker .col-xl-4, .daterangepicker .simplex-main-engine-holder .col-xl-4, .simplex-main-engine-holder .col-xl-4, .simplex-main-engine-holder .daterangepicker .col-xl-3, .daterangepicker .simplex-main-engine-holder .col-xl-3, .simplex-main-engine-holder .col-xl-3, .simplex-main-engine-holder .daterangepicker .col-xl-2, .daterangepicker .simplex-main-engine-holder .col-xl-2, .simplex-main-engine-holder .col-xl-2, .simplex-main-engine-holder .daterangepicker .col-xl-1, .daterangepicker .simplex-main-engine-holder .col-xl-1, .simplex-main-engine-holder .col-xl-1, .simplex-main-engine-holder .daterangepicker .col-lg, .daterangepicker .simplex-main-engine-holder .col-lg,
+.simplex-main-engine-holder .daterangepicker .col-lg-auto,
+.daterangepicker .simplex-main-engine-holder .col-lg-auto, .simplex-main-engine-holder .col-lg,
+.simplex-main-engine-holder .col-lg-auto, .simplex-main-engine-holder .daterangepicker .col-lg-12, .daterangepicker .simplex-main-engine-holder .col-lg-12, .simplex-main-engine-holder .col-lg-12, .simplex-main-engine-holder .daterangepicker .col-lg-11, .daterangepicker .simplex-main-engine-holder .col-lg-11, .simplex-main-engine-holder .col-lg-11, .simplex-main-engine-holder .daterangepicker .col-lg-10, .daterangepicker .simplex-main-engine-holder .col-lg-10, .simplex-main-engine-holder .col-lg-10, .simplex-main-engine-holder .daterangepicker .col-lg-9, .daterangepicker .simplex-main-engine-holder .col-lg-9, .simplex-main-engine-holder .col-lg-9, .simplex-main-engine-holder .daterangepicker .col-lg-8, .daterangepicker .simplex-main-engine-holder .col-lg-8, .simplex-main-engine-holder .col-lg-8, .simplex-main-engine-holder .daterangepicker .col-lg-7, .daterangepicker .simplex-main-engine-holder .col-lg-7, .simplex-main-engine-holder .col-lg-7, .simplex-main-engine-holder .daterangepicker .col-lg-6, .daterangepicker .simplex-main-engine-holder .col-lg-6, .simplex-main-engine-holder .col-lg-6, .simplex-main-engine-holder .col-lg-5, .simplex-main-engine-holder .col-lg-4, .simplex-main-engine-holder .col-lg-3, .simplex-main-engine-holder .col-lg-2, .simplex-main-engine-holder .col-lg-1, .simplex-main-engine-holder .col-md,
+.simplex-main-engine-holder .col-md-auto, .simplex-main-engine-holder .col-md-12, .simplex-main-engine-holder .col-md-11, .simplex-main-engine-holder .col-md-10, .simplex-main-engine-holder .col-md-9, .simplex-main-engine-holder .col-md-8, .simplex-main-engine-holder .col-md-7, .simplex-main-engine-holder .col-md-6, .simplex-main-engine-holder .col-md-5, .simplex-main-engine-holder .col-md-4, .simplex-main-engine-holder .col-md-3, .simplex-main-engine-holder .col-md-2, .simplex-main-engine-holder .col-md-1, .simplex-main-engine-holder .col-sm,
+.simplex-main-engine-holder .col-sm-auto, .simplex-main-engine-holder .col-sm-12, .simplex-main-engine-holder .col-sm-11, .simplex-main-engine-holder .col-sm-10, .simplex-main-engine-holder .col-sm-9, .simplex-main-engine-holder .col-sm-8, .simplex-main-engine-holder .col-sm-7, .simplex-main-engine-holder .col-sm-6, .simplex-main-engine-holder .col-sm-5, .simplex-main-engine-holder .col-sm-4, .simplex-main-engine-holder .col-sm-3, .simplex-main-engine-holder .col-sm-2, .simplex-main-engine-holder .col-sm-1, .simplex-main-engine-holder .col,
+.simplex-main-engine-holder .col-auto, .simplex-main-engine-holder .col-12, .simplex-main-engine-holder .col-11, .simplex-main-engine-holder .col-10, .simplex-main-engine-holder .col-9, .simplex-main-engine-holder .col-8, .simplex-main-engine-holder .col-7, .simplex-main-engine-holder .col-6, .simplex-main-engine-holder .col-5, .simplex-main-engine-holder .col-4, .simplex-main-engine-holder .col-3, .simplex-main-engine-holder .col-2, .simplex-main-engine-holder .col-1 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.daterangepicker .col, .simplex-main-engine-holder .col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.daterangepicker .col-auto, .simplex-main-engine-holder .col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+.daterangepicker .col-1, .simplex-main-engine-holder .col-1 {
+  flex: 0 0 8.3333333333%;
+  max-width: 8.3333333333%;
+}
+.daterangepicker .col-2, .simplex-main-engine-holder .col-2 {
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+}
+.daterangepicker .col-3, .simplex-main-engine-holder .col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.daterangepicker .col-4, .simplex-main-engine-holder .col-4 {
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+.daterangepicker .col-5, .simplex-main-engine-holder .col-5 {
+  flex: 0 0 41.6666666667%;
+  max-width: 41.6666666667%;
+}
+.daterangepicker .col-6, .simplex-main-engine-holder .col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.daterangepicker .col-7, .simplex-main-engine-holder .col-7 {
+  flex: 0 0 58.3333333333%;
+  max-width: 58.3333333333%;
+}
+.daterangepicker .col-8, .simplex-main-engine-holder .col-8 {
+  flex: 0 0 66.6666666667%;
+  max-width: 66.6666666667%;
+}
+.daterangepicker .col-9, .simplex-main-engine-holder .col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.daterangepicker .col-10, .simplex-main-engine-holder .col-10 {
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+}
+.daterangepicker .col-11, .simplex-main-engine-holder .col-11 {
+  flex: 0 0 91.6666666667%;
+  max-width: 91.6666666667%;
+}
+.daterangepicker .col-12, .simplex-main-engine-holder .col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.daterangepicker .order-first, .simplex-main-engine-holder .order-first {
+  order: -1;
+}
+.daterangepicker .order-last, .simplex-main-engine-holder .order-last {
+  order: 13;
+}
+.daterangepicker .order-0, .simplex-main-engine-holder .order-0 {
+  order: 0;
+}
+.daterangepicker .order-1, .simplex-main-engine-holder .order-1 {
+  order: 1;
+}
+.daterangepicker .order-2, .simplex-main-engine-holder .order-2 {
+  order: 2;
+}
+.daterangepicker .order-3, .simplex-main-engine-holder .order-3 {
+  order: 3;
+}
+.daterangepicker .order-4, .simplex-main-engine-holder .order-4 {
+  order: 4;
+}
+.daterangepicker .order-5, .simplex-main-engine-holder .order-5 {
+  order: 5;
+}
+.daterangepicker .order-6, .simplex-main-engine-holder .order-6 {
+  order: 6;
+}
+.daterangepicker .order-7, .simplex-main-engine-holder .order-7 {
+  order: 7;
+}
+.daterangepicker .order-8, .simplex-main-engine-holder .order-8 {
+  order: 8;
+}
+.daterangepicker .order-9, .simplex-main-engine-holder .order-9 {
+  order: 9;
+}
+.daterangepicker .order-10, .simplex-main-engine-holder .order-10 {
+  order: 10;
+}
+.daterangepicker .order-11, .simplex-main-engine-holder .order-11 {
+  order: 11;
+}
+.daterangepicker .order-12, .simplex-main-engine-holder .order-12 {
+  order: 12;
+}
+.daterangepicker .offset-1, .simplex-main-engine-holder .offset-1 {
+  margin-left: 8.3333333333%;
+}
+.daterangepicker .offset-2, .simplex-main-engine-holder .offset-2 {
+  margin-left: 16.6666666667%;
+}
+.daterangepicker .offset-3, .simplex-main-engine-holder .offset-3 {
+  margin-left: 25%;
+}
+.daterangepicker .offset-4, .simplex-main-engine-holder .offset-4 {
+  margin-left: 33.3333333333%;
+}
+.daterangepicker .offset-5, .simplex-main-engine-holder .offset-5 {
+  margin-left: 41.6666666667%;
+}
+.daterangepicker .offset-6, .simplex-main-engine-holder .offset-6 {
+  margin-left: 50%;
+}
+.daterangepicker .offset-7, .simplex-main-engine-holder .offset-7 {
+  margin-left: 58.3333333333%;
+}
+.daterangepicker .offset-8, .simplex-main-engine-holder .offset-8 {
+  margin-left: 66.6666666667%;
+}
+.daterangepicker .offset-9, .simplex-main-engine-holder .offset-9 {
+  margin-left: 75%;
+}
+.daterangepicker .offset-10, .simplex-main-engine-holder .offset-10 {
+  margin-left: 83.3333333333%;
+}
+.daterangepicker .offset-11, .simplex-main-engine-holder .offset-11 {
+  margin-left: 91.6666666667%;
+}
+@media (min-width: 576px) {
+  .daterangepicker .col-sm, .simplex-main-engine-holder .col-sm {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .daterangepicker .col-sm-auto, .simplex-main-engine-holder .col-sm-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+  .daterangepicker .col-sm-1, .simplex-main-engine-holder .col-sm-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .daterangepicker .col-sm-2, .simplex-main-engine-holder .col-sm-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .daterangepicker .col-sm-3, .simplex-main-engine-holder .col-sm-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .daterangepicker .col-sm-4, .simplex-main-engine-holder .col-sm-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+  .daterangepicker .col-sm-5, .simplex-main-engine-holder .col-sm-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+  .daterangepicker .col-sm-6, .simplex-main-engine-holder .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .daterangepicker .col-sm-7, .simplex-main-engine-holder .col-sm-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+  .daterangepicker .col-sm-8, .simplex-main-engine-holder .col-sm-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+  .daterangepicker .col-sm-9, .simplex-main-engine-holder .col-sm-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .daterangepicker .col-sm-10, .simplex-main-engine-holder .col-sm-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+  .daterangepicker .col-sm-11, .simplex-main-engine-holder .col-sm-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+  .daterangepicker .col-sm-12, .simplex-main-engine-holder .col-sm-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .daterangepicker .order-sm-first, .simplex-main-engine-holder .order-sm-first {
+    order: -1;
+  }
+  .daterangepicker .order-sm-last, .simplex-main-engine-holder .order-sm-last {
+    order: 13;
+  }
+  .daterangepicker .order-sm-0, .simplex-main-engine-holder .order-sm-0 {
+    order: 0;
+  }
+  .daterangepicker .order-sm-1, .simplex-main-engine-holder .order-sm-1 {
+    order: 1;
+  }
+  .daterangepicker .order-sm-2, .simplex-main-engine-holder .order-sm-2 {
+    order: 2;
+  }
+  .daterangepicker .order-sm-3, .simplex-main-engine-holder .order-sm-3 {
+    order: 3;
+  }
+  .daterangepicker .order-sm-4, .simplex-main-engine-holder .order-sm-4 {
+    order: 4;
+  }
+  .daterangepicker .order-sm-5, .simplex-main-engine-holder .order-sm-5 {
+    order: 5;
+  }
+  .daterangepicker .order-sm-6, .simplex-main-engine-holder .order-sm-6 {
+    order: 6;
+  }
+  .daterangepicker .order-sm-7, .simplex-main-engine-holder .order-sm-7 {
+    order: 7;
+  }
+  .daterangepicker .order-sm-8, .simplex-main-engine-holder .order-sm-8 {
+    order: 8;
+  }
+  .daterangepicker .order-sm-9, .simplex-main-engine-holder .order-sm-9 {
+    order: 9;
+  }
+  .daterangepicker .order-sm-10, .simplex-main-engine-holder .order-sm-10 {
+    order: 10;
+  }
+  .daterangepicker .order-sm-11, .simplex-main-engine-holder .order-sm-11 {
+    order: 11;
+  }
+  .daterangepicker .order-sm-12, .simplex-main-engine-holder .order-sm-12 {
+    order: 12;
+  }
+  .daterangepicker .offset-sm-0, .simplex-main-engine-holder .offset-sm-0 {
+    margin-left: 0;
+  }
+  .daterangepicker .offset-sm-1, .simplex-main-engine-holder .offset-sm-1 {
+    margin-left: 8.3333333333%;
+  }
+  .daterangepicker .offset-sm-2, .simplex-main-engine-holder .offset-sm-2 {
+    margin-left: 16.6666666667%;
+  }
+  .daterangepicker .offset-sm-3, .simplex-main-engine-holder .offset-sm-3 {
+    margin-left: 25%;
+  }
+  .daterangepicker .offset-sm-4, .simplex-main-engine-holder .offset-sm-4 {
+    margin-left: 33.3333333333%;
+  }
+  .daterangepicker .offset-sm-5, .simplex-main-engine-holder .offset-sm-5 {
+    margin-left: 41.6666666667%;
+  }
+  .daterangepicker .offset-sm-6, .simplex-main-engine-holder .offset-sm-6 {
+    margin-left: 50%;
+  }
+  .daterangepicker .offset-sm-7, .simplex-main-engine-holder .offset-sm-7 {
+    margin-left: 58.3333333333%;
+  }
+  .daterangepicker .offset-sm-8, .simplex-main-engine-holder .offset-sm-8 {
+    margin-left: 66.6666666667%;
+  }
+  .daterangepicker .offset-sm-9, .simplex-main-engine-holder .offset-sm-9 {
+    margin-left: 75%;
+  }
+  .daterangepicker .offset-sm-10, .simplex-main-engine-holder .offset-sm-10 {
+    margin-left: 83.3333333333%;
+  }
+  .daterangepicker .offset-sm-11, .simplex-main-engine-holder .offset-sm-11 {
+    margin-left: 91.6666666667%;
+  }
+}
+@media (min-width: 768px) {
+  .daterangepicker .col-md, .simplex-main-engine-holder .col-md {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .daterangepicker .col-md-auto, .simplex-main-engine-holder .col-md-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+  .daterangepicker .col-md-1, .simplex-main-engine-holder .col-md-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .daterangepicker .col-md-2, .simplex-main-engine-holder .col-md-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .daterangepicker .col-md-3, .simplex-main-engine-holder .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .daterangepicker .col-md-4, .simplex-main-engine-holder .col-md-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+  .daterangepicker .col-md-5, .simplex-main-engine-holder .col-md-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+  .daterangepicker .col-md-6, .simplex-main-engine-holder .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .daterangepicker .col-md-7, .simplex-main-engine-holder .col-md-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+  .daterangepicker .col-md-8, .simplex-main-engine-holder .col-md-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+  .daterangepicker .col-md-9, .simplex-main-engine-holder .col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .daterangepicker .col-md-10, .simplex-main-engine-holder .col-md-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+  .daterangepicker .col-md-11, .simplex-main-engine-holder .col-md-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+  .daterangepicker .col-md-12, .simplex-main-engine-holder .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .daterangepicker .order-md-first, .simplex-main-engine-holder .order-md-first {
+    order: -1;
+  }
+  .daterangepicker .order-md-last, .simplex-main-engine-holder .order-md-last {
+    order: 13;
+  }
+  .daterangepicker .order-md-0, .simplex-main-engine-holder .order-md-0 {
+    order: 0;
+  }
+  .daterangepicker .order-md-1, .simplex-main-engine-holder .order-md-1 {
+    order: 1;
+  }
+  .daterangepicker .order-md-2, .simplex-main-engine-holder .order-md-2 {
+    order: 2;
+  }
+  .daterangepicker .order-md-3, .simplex-main-engine-holder .order-md-3 {
+    order: 3;
+  }
+  .daterangepicker .order-md-4, .simplex-main-engine-holder .order-md-4 {
+    order: 4;
+  }
+  .daterangepicker .order-md-5, .simplex-main-engine-holder .order-md-5 {
+    order: 5;
+  }
+  .daterangepicker .order-md-6, .simplex-main-engine-holder .order-md-6 {
+    order: 6;
+  }
+  .daterangepicker .order-md-7, .simplex-main-engine-holder .order-md-7 {
+    order: 7;
+  }
+  .daterangepicker .order-md-8, .simplex-main-engine-holder .order-md-8 {
+    order: 8;
+  }
+  .daterangepicker .order-md-9, .simplex-main-engine-holder .order-md-9 {
+    order: 9;
+  }
+  .daterangepicker .order-md-10, .simplex-main-engine-holder .order-md-10 {
+    order: 10;
+  }
+  .daterangepicker .order-md-11, .simplex-main-engine-holder .order-md-11 {
+    order: 11;
+  }
+  .daterangepicker .order-md-12, .simplex-main-engine-holder .order-md-12 {
+    order: 12;
+  }
+  .daterangepicker .offset-md-0, .simplex-main-engine-holder .offset-md-0 {
+    margin-left: 0;
+  }
+  .daterangepicker .offset-md-1, .simplex-main-engine-holder .offset-md-1 {
+    margin-left: 8.3333333333%;
+  }
+  .daterangepicker .offset-md-2, .simplex-main-engine-holder .offset-md-2 {
+    margin-left: 16.6666666667%;
+  }
+  .daterangepicker .offset-md-3, .simplex-main-engine-holder .offset-md-3 {
+    margin-left: 25%;
+  }
+  .daterangepicker .offset-md-4, .simplex-main-engine-holder .offset-md-4 {
+    margin-left: 33.3333333333%;
+  }
+  .daterangepicker .offset-md-5, .simplex-main-engine-holder .offset-md-5 {
+    margin-left: 41.6666666667%;
+  }
+  .daterangepicker .offset-md-6, .simplex-main-engine-holder .offset-md-6 {
+    margin-left: 50%;
+  }
+  .daterangepicker .offset-md-7, .simplex-main-engine-holder .offset-md-7 {
+    margin-left: 58.3333333333%;
+  }
+  .daterangepicker .offset-md-8, .simplex-main-engine-holder .offset-md-8 {
+    margin-left: 66.6666666667%;
+  }
+  .daterangepicker .offset-md-9, .simplex-main-engine-holder .offset-md-9 {
+    margin-left: 75%;
+  }
+  .daterangepicker .offset-md-10, .simplex-main-engine-holder .offset-md-10 {
+    margin-left: 83.3333333333%;
+  }
+  .daterangepicker .offset-md-11, .simplex-main-engine-holder .offset-md-11 {
+    margin-left: 91.6666666667%;
+  }
+}
+@media (min-width: 992px) {
+  .daterangepicker .col-lg, .simplex-main-engine-holder .col-lg {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .daterangepicker .col-lg-auto, .simplex-main-engine-holder .col-lg-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+  .daterangepicker .col-lg-1, .simplex-main-engine-holder .col-lg-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .daterangepicker .col-lg-2, .simplex-main-engine-holder .col-lg-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .daterangepicker .col-lg-3, .simplex-main-engine-holder .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .daterangepicker .col-lg-4, .simplex-main-engine-holder .col-lg-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+  .daterangepicker .col-lg-5, .simplex-main-engine-holder .col-lg-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+  .daterangepicker .col-lg-6, .simplex-main-engine-holder .col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .daterangepicker .col-lg-7, .simplex-main-engine-holder .col-lg-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+  .daterangepicker .col-lg-8, .simplex-main-engine-holder .col-lg-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+  .daterangepicker .col-lg-9, .simplex-main-engine-holder .col-lg-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .daterangepicker .col-lg-10, .simplex-main-engine-holder .col-lg-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+  .daterangepicker .col-lg-11, .simplex-main-engine-holder .col-lg-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+  .daterangepicker .col-lg-12, .simplex-main-engine-holder .col-lg-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .daterangepicker .order-lg-first, .simplex-main-engine-holder .order-lg-first {
+    order: -1;
+  }
+  .daterangepicker .order-lg-last, .simplex-main-engine-holder .order-lg-last {
+    order: 13;
+  }
+  .daterangepicker .order-lg-0, .simplex-main-engine-holder .order-lg-0 {
+    order: 0;
+  }
+  .daterangepicker .order-lg-1, .simplex-main-engine-holder .order-lg-1 {
+    order: 1;
+  }
+  .daterangepicker .order-lg-2, .simplex-main-engine-holder .order-lg-2 {
+    order: 2;
+  }
+  .daterangepicker .order-lg-3, .simplex-main-engine-holder .order-lg-3 {
+    order: 3;
+  }
+  .daterangepicker .order-lg-4, .simplex-main-engine-holder .order-lg-4 {
+    order: 4;
+  }
+  .daterangepicker .order-lg-5, .simplex-main-engine-holder .order-lg-5 {
+    order: 5;
+  }
+  .daterangepicker .order-lg-6, .simplex-main-engine-holder .order-lg-6 {
+    order: 6;
+  }
+  .daterangepicker .order-lg-7, .simplex-main-engine-holder .order-lg-7 {
+    order: 7;
+  }
+  .daterangepicker .order-lg-8, .simplex-main-engine-holder .order-lg-8 {
+    order: 8;
+  }
+  .daterangepicker .order-lg-9, .simplex-main-engine-holder .order-lg-9 {
+    order: 9;
+  }
+  .daterangepicker .order-lg-10, .simplex-main-engine-holder .order-lg-10 {
+    order: 10;
+  }
+  .daterangepicker .order-lg-11, .simplex-main-engine-holder .order-lg-11 {
+    order: 11;
+  }
+  .daterangepicker .order-lg-12, .simplex-main-engine-holder .order-lg-12 {
+    order: 12;
+  }
+  .daterangepicker .offset-lg-0, .simplex-main-engine-holder .offset-lg-0 {
+    margin-left: 0;
+  }
+  .daterangepicker .offset-lg-1, .simplex-main-engine-holder .offset-lg-1 {
+    margin-left: 8.3333333333%;
+  }
+  .daterangepicker .offset-lg-2, .simplex-main-engine-holder .offset-lg-2 {
+    margin-left: 16.6666666667%;
+  }
+  .daterangepicker .offset-lg-3, .simplex-main-engine-holder .offset-lg-3 {
+    margin-left: 25%;
+  }
+  .daterangepicker .offset-lg-4, .simplex-main-engine-holder .offset-lg-4 {
+    margin-left: 33.3333333333%;
+  }
+  .daterangepicker .offset-lg-5, .simplex-main-engine-holder .offset-lg-5 {
+    margin-left: 41.6666666667%;
+  }
+  .daterangepicker .offset-lg-6, .simplex-main-engine-holder .offset-lg-6 {
+    margin-left: 50%;
+  }
+  .daterangepicker .offset-lg-7, .simplex-main-engine-holder .offset-lg-7 {
+    margin-left: 58.3333333333%;
+  }
+  .daterangepicker .offset-lg-8, .simplex-main-engine-holder .offset-lg-8 {
+    margin-left: 66.6666666667%;
+  }
+  .daterangepicker .offset-lg-9, .simplex-main-engine-holder .offset-lg-9 {
+    margin-left: 75%;
+  }
+  .daterangepicker .offset-lg-10, .simplex-main-engine-holder .offset-lg-10 {
+    margin-left: 83.3333333333%;
+  }
+  .daterangepicker .offset-lg-11, .simplex-main-engine-holder .offset-lg-11 {
+    margin-left: 91.6666666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .daterangepicker .col-xl, .simplex-main-engine-holder .col-xl {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .daterangepicker .col-xl-auto, .simplex-main-engine-holder .col-xl-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+  .daterangepicker .col-xl-1, .simplex-main-engine-holder .col-xl-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .daterangepicker .col-xl-2, .simplex-main-engine-holder .col-xl-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .daterangepicker .col-xl-3, .simplex-main-engine-holder .col-xl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .daterangepicker .col-xl-4, .simplex-main-engine-holder .col-xl-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+  .daterangepicker .col-xl-5, .simplex-main-engine-holder .col-xl-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+  .daterangepicker .col-xl-6, .simplex-main-engine-holder .col-xl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .daterangepicker .col-xl-7, .simplex-main-engine-holder .col-xl-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+  .daterangepicker .col-xl-8, .simplex-main-engine-holder .col-xl-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+  .daterangepicker .col-xl-9, .simplex-main-engine-holder .col-xl-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .daterangepicker .col-xl-10, .simplex-main-engine-holder .col-xl-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+  .daterangepicker .col-xl-11, .simplex-main-engine-holder .col-xl-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+  .daterangepicker .col-xl-12, .simplex-main-engine-holder .col-xl-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .daterangepicker .order-xl-first, .simplex-main-engine-holder .order-xl-first {
+    order: -1;
+  }
+  .daterangepicker .order-xl-last, .simplex-main-engine-holder .order-xl-last {
+    order: 13;
+  }
+  .daterangepicker .order-xl-0, .simplex-main-engine-holder .order-xl-0 {
+    order: 0;
+  }
+  .daterangepicker .order-xl-1, .simplex-main-engine-holder .order-xl-1 {
+    order: 1;
+  }
+  .daterangepicker .order-xl-2, .simplex-main-engine-holder .order-xl-2 {
+    order: 2;
+  }
+  .daterangepicker .order-xl-3, .simplex-main-engine-holder .order-xl-3 {
+    order: 3;
+  }
+  .daterangepicker .order-xl-4, .simplex-main-engine-holder .order-xl-4 {
+    order: 4;
+  }
+  .daterangepicker .order-xl-5, .simplex-main-engine-holder .order-xl-5 {
+    order: 5;
+  }
+  .daterangepicker .order-xl-6, .simplex-main-engine-holder .order-xl-6 {
+    order: 6;
+  }
+  .daterangepicker .order-xl-7, .simplex-main-engine-holder .order-xl-7 {
+    order: 7;
+  }
+  .daterangepicker .order-xl-8, .simplex-main-engine-holder .order-xl-8 {
+    order: 8;
+  }
+  .daterangepicker .order-xl-9, .simplex-main-engine-holder .order-xl-9 {
+    order: 9;
+  }
+  .daterangepicker .order-xl-10, .simplex-main-engine-holder .order-xl-10 {
+    order: 10;
+  }
+  .daterangepicker .order-xl-11, .simplex-main-engine-holder .order-xl-11 {
+    order: 11;
+  }
+  .daterangepicker .order-xl-12, .simplex-main-engine-holder .order-xl-12 {
+    order: 12;
+  }
+  .daterangepicker .offset-xl-0, .simplex-main-engine-holder .offset-xl-0 {
+    margin-left: 0;
+  }
+  .daterangepicker .offset-xl-1, .simplex-main-engine-holder .offset-xl-1 {
+    margin-left: 8.3333333333%;
+  }
+  .daterangepicker .offset-xl-2, .simplex-main-engine-holder .offset-xl-2 {
+    margin-left: 16.6666666667%;
+  }
+  .daterangepicker .offset-xl-3, .simplex-main-engine-holder .offset-xl-3 {
+    margin-left: 25%;
+  }
+  .daterangepicker .offset-xl-4, .simplex-main-engine-holder .offset-xl-4 {
+    margin-left: 33.3333333333%;
+  }
+  .daterangepicker .offset-xl-5, .simplex-main-engine-holder .offset-xl-5 {
+    margin-left: 41.6666666667%;
+  }
+  .daterangepicker .offset-xl-6, .simplex-main-engine-holder .offset-xl-6 {
+    margin-left: 50%;
+  }
+  .daterangepicker .offset-xl-7, .simplex-main-engine-holder .offset-xl-7 {
+    margin-left: 58.3333333333%;
+  }
+  .daterangepicker .offset-xl-8, .simplex-main-engine-holder .offset-xl-8 {
+    margin-left: 66.6666666667%;
+  }
+  .daterangepicker .offset-xl-9, .simplex-main-engine-holder .offset-xl-9 {
+    margin-left: 75%;
+  }
+  .daterangepicker .offset-xl-10, .simplex-main-engine-holder .offset-xl-10 {
+    margin-left: 83.3333333333%;
+  }
+  .daterangepicker .offset-xl-11, .simplex-main-engine-holder .offset-xl-11 {
+    margin-left: 91.6666666667%;
+  }
+}
+@media (min-width: 1440px) {
+  .daterangepicker .col-xxl, .simplex-main-engine-holder .col-xxl {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .daterangepicker .col-xxl-auto, .simplex-main-engine-holder .col-xxl-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+  .daterangepicker .col-xxl-1, .simplex-main-engine-holder .col-xxl-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .daterangepicker .col-xxl-2, .simplex-main-engine-holder .col-xxl-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .daterangepicker .col-xxl-3, .simplex-main-engine-holder .col-xxl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .daterangepicker .col-xxl-4, .simplex-main-engine-holder .col-xxl-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+  .daterangepicker .col-xxl-5, .simplex-main-engine-holder .col-xxl-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+  .daterangepicker .col-xxl-6, .simplex-main-engine-holder .col-xxl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .daterangepicker .col-xxl-7, .simplex-main-engine-holder .col-xxl-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+  .daterangepicker .col-xxl-8, .simplex-main-engine-holder .col-xxl-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+  .daterangepicker .col-xxl-9, .simplex-main-engine-holder .col-xxl-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .daterangepicker .col-xxl-10, .simplex-main-engine-holder .col-xxl-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+  .daterangepicker .col-xxl-11, .simplex-main-engine-holder .col-xxl-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+  .daterangepicker .col-xxl-12, .simplex-main-engine-holder .col-xxl-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .daterangepicker .order-xxl-first, .simplex-main-engine-holder .order-xxl-first {
+    order: -1;
+  }
+  .daterangepicker .order-xxl-last, .simplex-main-engine-holder .order-xxl-last {
+    order: 13;
+  }
+  .daterangepicker .order-xxl-0, .simplex-main-engine-holder .order-xxl-0 {
+    order: 0;
+  }
+  .daterangepicker .order-xxl-1, .simplex-main-engine-holder .order-xxl-1 {
+    order: 1;
+  }
+  .daterangepicker .order-xxl-2, .simplex-main-engine-holder .order-xxl-2 {
+    order: 2;
+  }
+  .daterangepicker .order-xxl-3, .simplex-main-engine-holder .order-xxl-3 {
+    order: 3;
+  }
+  .daterangepicker .order-xxl-4, .simplex-main-engine-holder .order-xxl-4 {
+    order: 4;
+  }
+  .daterangepicker .order-xxl-5, .simplex-main-engine-holder .order-xxl-5 {
+    order: 5;
+  }
+  .daterangepicker .order-xxl-6, .simplex-main-engine-holder .order-xxl-6 {
+    order: 6;
+  }
+  .daterangepicker .order-xxl-7, .simplex-main-engine-holder .order-xxl-7 {
+    order: 7;
+  }
+  .daterangepicker .order-xxl-8, .simplex-main-engine-holder .order-xxl-8 {
+    order: 8;
+  }
+  .daterangepicker .order-xxl-9, .simplex-main-engine-holder .order-xxl-9 {
+    order: 9;
+  }
+  .daterangepicker .order-xxl-10, .simplex-main-engine-holder .order-xxl-10 {
+    order: 10;
+  }
+  .daterangepicker .order-xxl-11, .simplex-main-engine-holder .order-xxl-11 {
+    order: 11;
+  }
+  .daterangepicker .order-xxl-12, .simplex-main-engine-holder .order-xxl-12 {
+    order: 12;
+  }
+  .daterangepicker .offset-xxl-0, .simplex-main-engine-holder .offset-xxl-0 {
+    margin-left: 0;
+  }
+  .daterangepicker .offset-xxl-1, .simplex-main-engine-holder .offset-xxl-1 {
+    margin-left: 8.3333333333%;
+  }
+  .daterangepicker .offset-xxl-2, .simplex-main-engine-holder .offset-xxl-2 {
+    margin-left: 16.6666666667%;
+  }
+  .daterangepicker .offset-xxl-3, .simplex-main-engine-holder .offset-xxl-3 {
+    margin-left: 25%;
+  }
+  .daterangepicker .offset-xxl-4, .simplex-main-engine-holder .offset-xxl-4 {
+    margin-left: 33.3333333333%;
+  }
+  .daterangepicker .offset-xxl-5, .simplex-main-engine-holder .offset-xxl-5 {
+    margin-left: 41.6666666667%;
+  }
+  .daterangepicker .offset-xxl-6, .simplex-main-engine-holder .offset-xxl-6 {
+    margin-left: 50%;
+  }
+  .daterangepicker .offset-xxl-7, .simplex-main-engine-holder .offset-xxl-7 {
+    margin-left: 58.3333333333%;
+  }
+  .daterangepicker .offset-xxl-8, .simplex-main-engine-holder .offset-xxl-8 {
+    margin-left: 66.6666666667%;
+  }
+  .daterangepicker .offset-xxl-9, .simplex-main-engine-holder .offset-xxl-9 {
+    margin-left: 75%;
+  }
+  .daterangepicker .offset-xxl-10, .simplex-main-engine-holder .offset-xxl-10 {
+    margin-left: 83.3333333333%;
+  }
+  .daterangepicker .offset-xxl-11, .simplex-main-engine-holder .offset-xxl-11 {
+    margin-left: 91.6666666667%;
+  }
+}
+@media (min-width: 1600px) {
+  .daterangepicker .col-xxxl, .simplex-main-engine-holder .col-xxxl {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .daterangepicker .col-xxxl-auto, .simplex-main-engine-holder .col-xxxl-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+  .daterangepicker .col-xxxl-1, .simplex-main-engine-holder .col-xxxl-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .daterangepicker .col-xxxl-2, .simplex-main-engine-holder .col-xxxl-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .daterangepicker .col-xxxl-3, .simplex-main-engine-holder .col-xxxl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .daterangepicker .col-xxxl-4, .simplex-main-engine-holder .col-xxxl-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+  .daterangepicker .col-xxxl-5, .simplex-main-engine-holder .col-xxxl-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+  .daterangepicker .col-xxxl-6, .simplex-main-engine-holder .col-xxxl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .daterangepicker .col-xxxl-7, .simplex-main-engine-holder .col-xxxl-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+  .daterangepicker .col-xxxl-8, .simplex-main-engine-holder .col-xxxl-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+  .daterangepicker .col-xxxl-9, .simplex-main-engine-holder .col-xxxl-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .daterangepicker .col-xxxl-10, .simplex-main-engine-holder .col-xxxl-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+  .daterangepicker .col-xxxl-11, .simplex-main-engine-holder .col-xxxl-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+  .daterangepicker .col-xxxl-12, .simplex-main-engine-holder .col-xxxl-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .daterangepicker .order-xxxl-first, .simplex-main-engine-holder .order-xxxl-first {
+    order: -1;
+  }
+  .daterangepicker .order-xxxl-last, .simplex-main-engine-holder .order-xxxl-last {
+    order: 13;
+  }
+  .daterangepicker .order-xxxl-0, .simplex-main-engine-holder .order-xxxl-0 {
+    order: 0;
+  }
+  .daterangepicker .order-xxxl-1, .simplex-main-engine-holder .order-xxxl-1 {
+    order: 1;
+  }
+  .daterangepicker .order-xxxl-2, .simplex-main-engine-holder .order-xxxl-2 {
+    order: 2;
+  }
+  .daterangepicker .order-xxxl-3, .simplex-main-engine-holder .order-xxxl-3 {
+    order: 3;
+  }
+  .daterangepicker .order-xxxl-4, .simplex-main-engine-holder .order-xxxl-4 {
+    order: 4;
+  }
+  .daterangepicker .order-xxxl-5, .simplex-main-engine-holder .order-xxxl-5 {
+    order: 5;
+  }
+  .daterangepicker .order-xxxl-6, .simplex-main-engine-holder .order-xxxl-6 {
+    order: 6;
+  }
+  .daterangepicker .order-xxxl-7, .simplex-main-engine-holder .order-xxxl-7 {
+    order: 7;
+  }
+  .daterangepicker .order-xxxl-8, .simplex-main-engine-holder .order-xxxl-8 {
+    order: 8;
+  }
+  .daterangepicker .order-xxxl-9, .simplex-main-engine-holder .order-xxxl-9 {
+    order: 9;
+  }
+  .daterangepicker .order-xxxl-10, .simplex-main-engine-holder .order-xxxl-10 {
+    order: 10;
+  }
+  .daterangepicker .order-xxxl-11, .simplex-main-engine-holder .order-xxxl-11 {
+    order: 11;
+  }
+  .daterangepicker .order-xxxl-12, .simplex-main-engine-holder .order-xxxl-12 {
+    order: 12;
+  }
+  .daterangepicker .offset-xxxl-0, .simplex-main-engine-holder .offset-xxxl-0 {
+    margin-left: 0;
+  }
+  .daterangepicker .offset-xxxl-1, .simplex-main-engine-holder .offset-xxxl-1 {
+    margin-left: 8.3333333333%;
+  }
+  .daterangepicker .offset-xxxl-2, .simplex-main-engine-holder .offset-xxxl-2 {
+    margin-left: 16.6666666667%;
+  }
+  .daterangepicker .offset-xxxl-3, .simplex-main-engine-holder .offset-xxxl-3 {
+    margin-left: 25%;
+  }
+  .daterangepicker .offset-xxxl-4, .simplex-main-engine-holder .offset-xxxl-4 {
+    margin-left: 33.3333333333%;
+  }
+  .daterangepicker .offset-xxxl-5, .simplex-main-engine-holder .offset-xxxl-5 {
+    margin-left: 41.6666666667%;
+  }
+  .daterangepicker .offset-xxxl-6, .simplex-main-engine-holder .offset-xxxl-6 {
+    margin-left: 50%;
+  }
+  .daterangepicker .offset-xxxl-7, .simplex-main-engine-holder .offset-xxxl-7 {
+    margin-left: 58.3333333333%;
+  }
+  .daterangepicker .offset-xxxl-8, .simplex-main-engine-holder .offset-xxxl-8 {
+    margin-left: 66.6666666667%;
+  }
+  .daterangepicker .offset-xxxl-9, .simplex-main-engine-holder .offset-xxxl-9 {
+    margin-left: 75%;
+  }
+  .daterangepicker .offset-xxxl-10, .simplex-main-engine-holder .offset-xxxl-10 {
+    margin-left: 83.3333333333%;
+  }
+  .daterangepicker .offset-xxxl-11, .simplex-main-engine-holder .offset-xxxl-11 {
+    margin-left: 91.6666666667%;
+  }
+}
+.daterangepicker .toast, .simplex-main-engine-holder .toast {
+  max-width: 350px;
+  overflow: hidden;
+  font-size: 0.875rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  border-radius: 0.25rem;
+}
+.daterangepicker .toast:not(:last-child), .simplex-main-engine-holder .toast:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.daterangepicker .toast.showing, .simplex-main-engine-holder .toast.showing {
+  opacity: 1;
+}
+.daterangepicker .toast.show, .simplex-main-engine-holder .toast.show {
+  display: block;
+  opacity: 1;
+}
+.daterangepicker .toast.hide, .simplex-main-engine-holder .toast.hide {
+  display: none;
+}
+.daterangepicker .toast-header, .simplex-main-engine-holder .toast-header {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  color: #6c757d;
+  background-color: rgba(255, 255, 255, 0.85);
+  background-clip: padding-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.daterangepicker .toast-body, .simplex-main-engine-holder .toast-body {
+  padding: 0.75rem;
+}
+.daterangepicker .d-none, .simplex-main-engine-holder .d-none {
+  display: none !important;
+}
+.daterangepicker .d-inline, .simplex-main-engine-holder .d-inline {
+  display: inline !important;
+}
+.daterangepicker .d-inline-block, .simplex-main-engine-holder .d-inline-block {
+  display: inline-block !important;
+}
+.daterangepicker .d-block, .simplex-main-engine-holder .d-block {
+  display: block !important;
+}
+.daterangepicker .d-table, .simplex-main-engine-holder .d-table {
+  display: table !important;
+}
+.daterangepicker .d-table-row, .simplex-main-engine-holder .d-table-row {
+  display: table-row !important;
+}
+.daterangepicker .d-table-cell, .simplex-main-engine-holder .d-table-cell {
+  display: table-cell !important;
+}
+.daterangepicker .d-flex, .simplex-main-engine-holder .d-flex {
+  display: flex !important;
+}
+.daterangepicker .d-inline-flex, .simplex-main-engine-holder .d-inline-flex {
+  display: inline-flex !important;
+}
+@media (min-width: 576px) {
+  .daterangepicker .d-sm-none, .simplex-main-engine-holder .d-sm-none {
+    display: none !important;
+  }
+  .daterangepicker .d-sm-inline, .simplex-main-engine-holder .d-sm-inline {
+    display: inline !important;
+  }
+  .daterangepicker .d-sm-inline-block, .simplex-main-engine-holder .d-sm-inline-block {
+    display: inline-block !important;
+  }
+  .daterangepicker .d-sm-block, .simplex-main-engine-holder .d-sm-block {
+    display: block !important;
+  }
+  .daterangepicker .d-sm-table, .simplex-main-engine-holder .d-sm-table {
+    display: table !important;
+  }
+  .daterangepicker .d-sm-table-row, .simplex-main-engine-holder .d-sm-table-row {
+    display: table-row !important;
+  }
+  .daterangepicker .d-sm-table-cell, .simplex-main-engine-holder .d-sm-table-cell {
+    display: table-cell !important;
+  }
+  .daterangepicker .d-sm-flex, .simplex-main-engine-holder .d-sm-flex {
+    display: flex !important;
+  }
+  .daterangepicker .d-sm-inline-flex, .simplex-main-engine-holder .d-sm-inline-flex {
+    display: inline-flex !important;
+  }
+}
+@media (min-width: 768px) {
+  .daterangepicker .d-md-none, .simplex-main-engine-holder .d-md-none {
+    display: none !important;
+  }
+  .daterangepicker .d-md-inline, .simplex-main-engine-holder .d-md-inline {
+    display: inline !important;
+  }
+  .daterangepicker .d-md-inline-block, .simplex-main-engine-holder .d-md-inline-block {
+    display: inline-block !important;
+  }
+  .daterangepicker .d-md-block, .simplex-main-engine-holder .d-md-block {
+    display: block !important;
+  }
+  .daterangepicker .d-md-table, .simplex-main-engine-holder .d-md-table {
+    display: table !important;
+  }
+  .daterangepicker .d-md-table-row, .simplex-main-engine-holder .d-md-table-row {
+    display: table-row !important;
+  }
+  .daterangepicker .d-md-table-cell, .simplex-main-engine-holder .d-md-table-cell {
+    display: table-cell !important;
+  }
+  .daterangepicker .d-md-flex, .simplex-main-engine-holder .d-md-flex {
+    display: flex !important;
+  }
+  .daterangepicker .d-md-inline-flex, .simplex-main-engine-holder .d-md-inline-flex {
+    display: inline-flex !important;
+  }
+}
+@media (min-width: 992px) {
+  .daterangepicker .d-lg-none, .simplex-main-engine-holder .d-lg-none {
+    display: none !important;
+  }
+  .daterangepicker .d-lg-inline, .simplex-main-engine-holder .d-lg-inline {
+    display: inline !important;
+  }
+  .daterangepicker .d-lg-inline-block, .simplex-main-engine-holder .d-lg-inline-block {
+    display: inline-block !important;
+  }
+  .daterangepicker .d-lg-block, .simplex-main-engine-holder .d-lg-block {
+    display: block !important;
+  }
+  .daterangepicker .d-lg-table, .simplex-main-engine-holder .d-lg-table {
+    display: table !important;
+  }
+  .daterangepicker .d-lg-table-row, .simplex-main-engine-holder .d-lg-table-row {
+    display: table-row !important;
+  }
+  .daterangepicker .d-lg-table-cell, .simplex-main-engine-holder .d-lg-table-cell {
+    display: table-cell !important;
+  }
+  .daterangepicker .d-lg-flex, .simplex-main-engine-holder .d-lg-flex {
+    display: flex !important;
+  }
+  .daterangepicker .d-lg-inline-flex, .simplex-main-engine-holder .d-lg-inline-flex {
+    display: inline-flex !important;
+  }
+}
+@media (min-width: 1200px) {
+  .daterangepicker .d-xl-none, .simplex-main-engine-holder .d-xl-none {
+    display: none !important;
+  }
+  .daterangepicker .d-xl-inline, .simplex-main-engine-holder .d-xl-inline {
+    display: inline !important;
+  }
+  .daterangepicker .d-xl-inline-block, .simplex-main-engine-holder .d-xl-inline-block {
+    display: inline-block !important;
+  }
+  .daterangepicker .d-xl-block, .simplex-main-engine-holder .d-xl-block {
+    display: block !important;
+  }
+  .daterangepicker .d-xl-table, .simplex-main-engine-holder .d-xl-table {
+    display: table !important;
+  }
+  .daterangepicker .d-xl-table-row, .simplex-main-engine-holder .d-xl-table-row {
+    display: table-row !important;
+  }
+  .daterangepicker .d-xl-table-cell, .simplex-main-engine-holder .d-xl-table-cell {
+    display: table-cell !important;
+  }
+  .daterangepicker .d-xl-flex, .simplex-main-engine-holder .d-xl-flex {
+    display: flex !important;
+  }
+  .daterangepicker .d-xl-inline-flex, .simplex-main-engine-holder .d-xl-inline-flex {
+    display: inline-flex !important;
+  }
+}
+@media (min-width: 1440px) {
+  .daterangepicker .d-xxl-none, .simplex-main-engine-holder .d-xxl-none {
+    display: none !important;
+  }
+  .daterangepicker .d-xxl-inline, .simplex-main-engine-holder .d-xxl-inline {
+    display: inline !important;
+  }
+  .daterangepicker .d-xxl-inline-block, .simplex-main-engine-holder .d-xxl-inline-block {
+    display: inline-block !important;
+  }
+  .daterangepicker .d-xxl-block, .simplex-main-engine-holder .d-xxl-block {
+    display: block !important;
+  }
+  .daterangepicker .d-xxl-table, .simplex-main-engine-holder .d-xxl-table {
+    display: table !important;
+  }
+  .daterangepicker .d-xxl-table-row, .simplex-main-engine-holder .d-xxl-table-row {
+    display: table-row !important;
+  }
+  .daterangepicker .d-xxl-table-cell, .simplex-main-engine-holder .d-xxl-table-cell {
+    display: table-cell !important;
+  }
+  .daterangepicker .d-xxl-flex, .simplex-main-engine-holder .d-xxl-flex {
+    display: flex !important;
+  }
+  .daterangepicker .d-xxl-inline-flex, .simplex-main-engine-holder .d-xxl-inline-flex {
+    display: inline-flex !important;
+  }
+}
+@media (min-width: 1600px) {
+  .daterangepicker .d-xxxl-none, .simplex-main-engine-holder .d-xxxl-none {
+    display: none !important;
+  }
+  .daterangepicker .d-xxxl-inline, .simplex-main-engine-holder .d-xxxl-inline {
+    display: inline !important;
+  }
+  .daterangepicker .d-xxxl-inline-block, .simplex-main-engine-holder .d-xxxl-inline-block {
+    display: inline-block !important;
+  }
+  .daterangepicker .d-xxxl-block, .simplex-main-engine-holder .d-xxxl-block {
+    display: block !important;
+  }
+  .daterangepicker .d-xxxl-table, .simplex-main-engine-holder .d-xxxl-table {
+    display: table !important;
+  }
+  .daterangepicker .d-xxxl-table-row, .simplex-main-engine-holder .d-xxxl-table-row {
+    display: table-row !important;
+  }
+  .daterangepicker .d-xxxl-table-cell, .simplex-main-engine-holder .d-xxxl-table-cell {
+    display: table-cell !important;
+  }
+  .daterangepicker .d-xxxl-flex, .simplex-main-engine-holder .d-xxxl-flex {
+    display: flex !important;
+  }
+  .daterangepicker .d-xxxl-inline-flex, .simplex-main-engine-holder .d-xxxl-inline-flex {
+    display: inline-flex !important;
+  }
+}
+@media print {
+  .daterangepicker .d-print-none, .simplex-main-engine-holder .d-print-none {
+    display: none !important;
+  }
+  .daterangepicker .d-print-inline, .simplex-main-engine-holder .d-print-inline {
+    display: inline !important;
+  }
+  .daterangepicker .d-print-inline-block, .simplex-main-engine-holder .d-print-inline-block {
+    display: inline-block !important;
+  }
+  .daterangepicker .d-print-block, .simplex-main-engine-holder .d-print-block {
+    display: block !important;
+  }
+  .daterangepicker .d-print-table, .simplex-main-engine-holder .d-print-table {
+    display: table !important;
+  }
+  .daterangepicker .d-print-table-row, .simplex-main-engine-holder .d-print-table-row {
+    display: table-row !important;
+  }
+  .daterangepicker .d-print-table-cell, .simplex-main-engine-holder .d-print-table-cell {
+    display: table-cell !important;
+  }
+  .daterangepicker .d-print-flex, .simplex-main-engine-holder .d-print-flex {
+    display: flex !important;
+  }
+  .daterangepicker .d-print-inline-flex, .simplex-main-engine-holder .d-print-inline-flex {
+    display: inline-flex !important;
+  }
+}
+
+.daterangepicker.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999999 !important;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  font-size: 1rem;
+  color: var(--daterangepicker-color);
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  white-space: normal;
+  line-break: auto;
+  font-size: 0.875rem;
+  word-wrap: break-word;
+  opacity: 0;
+}
+
+.tooltip.show {
+  opacity: 0.9;
+  z-index: 2147483652;
+}
+
+.tooltip .arrow {
+  position: absolute;
+  display: block;
+  width: 0.8rem;
+  height: 0.4rem;
+}
+
+.tooltip .arrow::before {
+  position: absolute;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+}
+
+.bs-tooltip-top, .bs-tooltip-auto[x-placement^=top] {
+  padding: 0.4rem 0;
+}
+
+.bs-tooltip-top .arrow, .bs-tooltip-auto[x-placement^=top] .arrow {
+  bottom: 0;
+}
+
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^=top] .arrow::before {
+  top: 0;
+  border-width: 0.4rem 0.4rem 0;
+  border-top-color: #000;
+}
+
+.bs-tooltip-right, .bs-tooltip-auto[x-placement^=right] {
+  padding: 0 0.4rem;
+}
+
+.bs-tooltip-right .arrow, .bs-tooltip-auto[x-placement^=right] .arrow {
+  left: 0;
+  width: 0.4rem;
+  height: 0.8rem;
+}
+
+.bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^=right] .arrow::before {
+  right: 0;
+  border-width: 0.4rem 0.4rem 0.4rem 0;
+  border-right-color: #000;
+}
+
+.bs-tooltip-bottom, .bs-tooltip-auto[x-placement^=bottom] {
+  padding: 0.4rem 0;
+}
+
+.bs-tooltip-bottom .arrow, .bs-tooltip-auto[x-placement^=bottom] .arrow {
+  top: 0;
+}
+
+.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^=bottom] .arrow::before {
+  bottom: 0;
+  border-width: 0 0.4rem 0.4rem;
+  border-bottom-color: #000;
+}
+
+.bs-tooltip-left, .bs-tooltip-auto[x-placement^=left] {
+  padding: 0 0.4rem;
+}
+
+.bs-tooltip-left .arrow, .bs-tooltip-auto[x-placement^=left] .arrow {
+  right: 0;
+  width: 0.4rem;
+  height: 0.8rem;
+}
+
+.bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^=left] .arrow::before {
+  left: 0;
+  border-width: 0.4rem 0 0.4rem 0.4rem;
+  border-left-color: #000;
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 0.25rem 0.5rem;
+  color: var(--tooltip-color);
+  text-align: center;
+  background-color: var(--tooltip-bg);
+  border-radius: 0.25rem;
+}
+.bottom-sticky-tooltip .tooltip-inner {
+  max-width: 80%;
+}
+
+.engine-header-close-button > i {
+  margin-inline-start: 15px;
+  font-size: 30px;
+  font-style: normal;
+  padding: 0 2rem;
+}
+
+.daterangepicker {
+  position: absolute;
+  height: auto;
+  background: var(--daterangepicker-cell-bg-color);
+  padding: 0.5rem 0;
+  color: var(--daterangepicker-color);
+  border-radius: var(--daterangepicker-border-radius);
+  width: var(--daterangepicker-width);
+  margin: 0.125rem 0 0;
+  top: 0px !important;
+  right: 0 !important;
+  background-clip: border-box;
+  font-family: var(--main-font-title);
+  border: none;
+  z-index: 2147483647;
+}
+.daterangepicker .container {
+  width: 100%;
+}
+.daterangepicker #closeEngine {
+  display: none;
+}
+.daterangepicker .div-row {
+  float: right;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: var(--main-font-bold);
+}
+.daterangepicker .close-desktop-calendar {
+  border: none;
+  background: url("data:image/svg+xml,%3Csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.5063 0.119999L9.0303 8.8L15.5543 0.119999H17.7103L10.0663 10.2L17.4863 20H15.3303L9.0303 11.6L2.7303 20H0.518297L7.9383 10.2L0.294297 0.119999H2.5063Z' fill='%23505050'/%3E%3C/svg%3E%0A") no-repeat;
+  font-size: 2rem;
+  width: 18px;
+  height: 20px;
+  outline: none;
+  order: 3;
+}
+.daterangepicker .nav-logo-holder {
+  display: none;
+}
+.daterangepicker.room-paxs-click .calender-content {
+  display: none;
+}
+.daterangepicker.room-paxs-click .ranges {
+  display: none;
+}
+.daterangepicker.room-paxs-click .side-content {
+  width: 100%;
+  padding: 0 15px;
+}
+.daterangepicker.room-paxs-click .side-content .submit-area {
+  border-top: 1px dashed var(--rooms-paxs-border-top-color);
+  box-shadow: none;
+}
+.daterangepicker.room-paxs-click .side-content .submit-area .cancel-btn {
+  display: none;
+}
+.daterangepicker.room-paxs-click .side-content .submit-area .calendar-legend {
+  display: none;
+}
+.daterangepicker.room-paxs-click .side-content .submit-area .rooms-paxs-cancel-btn {
+  display: block;
+  width: 90px;
+  background: var(--rooms-paxs-cancel-button-bg-color);
+  z-index: 11;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 10px;
+  cursor: pointer;
+  position: relative;
+  float: right;
+  border-radius: 6px;
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder {
+  display: block !important;
+  min-height: 90vh;
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder .rooms-paxs-step {
+  text-align: center;
+  width: 100%;
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder .rooms-paxs-step .number {
+  display: none;
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder .rooms-paxs-step .step-label {
+  font-size: 1.25rem;
+  display: flex;
+  float: right;
+  width: 100%;
+  border-bottom: 1px dashed var(--rooms-paxs-border-top-color);
+  padding: 5%;
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder .room-paxs-content {
+  min-height: 0;
+  color: var(--rooms-paxs-button-text-color);
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-holder {
+  position: relative;
+  border-bottom: 1px dashed var(--rooms-paxs-border-top-color);
+  padding: 10px 0;
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-holder .room-pax-holder-row {
+  display: block !important;
+  width: 100%;
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-holder .remove-room-panel {
+  left: 0;
+  color: transparent;
+  width: 17px;
+  height: 20px;
+  cursor: pointer;
+  top: 0;
+  background: url("../../common/images/trash.png");
+  background-repeat: no-repeat;
+  display: block;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-title {
+  height: 1rem;
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder .room-paxs-content .room-title {
+  font-size: 2rem;
+  font-family: var(--main-font-bold);
+  display: grid;
+  justify-content: flex-start;
+  position: relative;
+  margin: 0;
+  float: none;
+  clear: right;
+  top: 25px;
+  line-height: 1;
+  color: var(--rooms-paxs-room-title-color);
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder .room-paxs-content .room-title .room-number {
+  font-size: 3rem;
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder .room-paxs-content .room-title .room-pax-summery {
+  display: none;
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder .room-paxs-content .add-room-container {
+  margin: 5% auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder .room-paxs-content .add-room-container .add-room-button-margin {
+  border-bottom: 1px dashed var(--rooms-paxs-border-top-color);
+  width: 25%;
+  display: block;
+  align-self: center;
+  position: relative;
+  top: 10%;
+}
+.daterangepicker.room-paxs-click .side-content .room-paxs-holder .room-paxs-content .add-room-container .add-room {
+  display: flex;
+  justify-content: center;
+  background: var(--rooms-paxs-cancel-button-bg-color);
+  border-radius: 6px;
+  height: 40px;
+  width: 111px;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.daterangepicker.calendars-click .load-calendars {
+  display: block !important;
+}
+.daterangepicker.calendars-click .side-content {
+  float: right;
+  width: 100%;
+}
+.daterangepicker.calendars-click .side-content .ranges {
+  position: fixed;
+  right: 0;
+  background: var(--selects-bg);
+  height: 9%;
+  width: 100%;
+  text-align: right;
+  z-index: 11;
+}
+.daterangepicker.calendars-click .side-content .ranges .summery-dates {
+  color: var(--daterangepicker-color);
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  align-items: center;
+  height: 100%;
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  background: var(--daterangepicker-cell-bg-color);
+}
+.daterangepicker.calendars-click .side-content .ranges .summery-dates .summery-date {
+  order: 2;
+  display: block;
+}
+.daterangepicker.calendars-click .side-content .ranges .summery-dates .summery-date .part1 {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  justify-content: center;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0;
+}
+.daterangepicker.calendars-click .side-content .ranges .summery-dates .summery-date .part1.active .summery-title {
+  color: var(--arrival-date-text-color);
+}
+.daterangepicker.calendars-click .side-content .ranges .summery-dates .summery-date .part1 .summery-title {
+  font-size: 0.875rem;
+  width: 100%;
+  font-family: var(--main-font-bold);
+}
+.daterangepicker.calendars-click .side-content .ranges .summery-dates .summery-date .part1 .summery-month-day {
+  font-size: 1.875rem;
+  font-family: var(--main-font-bold);
+  text-align: center;
+  order: 3;
+}
+.daterangepicker.calendars-click .side-content .ranges .summery-dates .summery-date .part2 {
+  background: var(--engine-bg);
+  padding: 5px 10px;
+  width: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.daterangepicker.calendars-click .side-content .ranges .summery-dates .summery-date .part2 .summery-week-day {
+  order: 1;
+  display: none;
+}
+.daterangepicker.calendars-click .side-content .ranges .summery-dates .summery-date .part2 .summery-month {
+  order: 2;
+}
+.daterangepicker.calendars-click .side-content .ranges .summery-dates .summery-date .part2 .summery-year {
+  padding-right: 5px;
+  order: 4;
+}
+.daterangepicker.calendars-click .side-content .ranges .summery-dates .summery-date:first-child {
+  order: 0;
+}
+.daterangepicker.calendars-click .side-content .ranges .summery-nights {
+  display: none;
+}
+.daterangepicker.calendars-click .side-content .room-paxs-holder, .daterangepicker.calendars-click .side-content .promo-holder {
+  display: none;
+}
+.daterangepicker .calendars-holder {
+  padding: 0;
+  background: var(--datepickerrange-inner-bg-color);
+  float: right;
+  width: 100%;
+  position: absolute;
+  display: block;
+  right: 0;
+  left: 0;
+}
+.daterangepicker .calendars-holder .side-content .ranges .summery-dates {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  position: fixed;
+  top: 0%;
+  background: var(--days-holder-bg-color);
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  right: 0;
+  left: 0;
+  height: 10%;
+  z-index: 100;
+}
+.daterangepicker .calendars-holder .side-content .ranges .summery-dates .start-end-dates-seperator {
+  background: url("../../common/images/rightArrow.png") no-repeat center center;
+  height: 40px;
+  width: 20px;
+  order: 2;
+  transform: rotate(180deg);
+}
+.daterangepicker .calendars-holder .side-content .ranges .summery-dates .summery-date {
+  font-family: var(--main-font);
+  padding: 2%;
+}
+.daterangepicker .calendars-holder .side-content .ranges .summery-dates .summery-date.check-in, .daterangepicker .calendars-holder .side-content .ranges .summery-dates .summery-date.check-out {
+  text-align: center;
+  padding: 0;
+}
+.daterangepicker .calendars-holder .side-content .ranges .summery-dates .summery-date.check-in {
+  order: 1;
+}
+.daterangepicker .calendars-holder .side-content .ranges .summery-dates .summery-date.check-in .part1 .summery-title {
+  font-size: 0.875rem;
+  font-family: var(--main-font-bold);
+}
+.daterangepicker .calendars-holder .side-content .ranges .summery-dates .summery-date.check-out {
+  order: 3;
+}
+.daterangepicker .calendars-holder .side-content .ranges .summery-dates .summery-date .part2 {
+  font-size: var(--arrival-leave-text-font-size);
+  display: flex;
+  white-space: nowrap;
+  padding: 0;
+}
+.daterangepicker .calendars-holder .side-content .ranges .summery-dates .summery-date .part2 .summery-week-day {
+  order: 1;
+  margin-left: 5px;
+}
+.daterangepicker .calendars-holder .side-content .ranges .summery-dates .summery-date .part2 .summery-month {
+  order: 2;
+  margin-left: 5px;
+}
+.daterangepicker .calendars-holder .side-content .ranges .summery-dates .summery-date .part2 .summery-month-day {
+  order: 3;
+  margin-left: 5px;
+}
+.daterangepicker .calendars-holder .side-content .ranges .summery-dates .summery-date .part2 .summery-year {
+  order: 4;
+}
+.daterangepicker .calendars-holder .side-content .ranges .summery-dates .summery-nights {
+  display: none;
+}
+.daterangepicker .calendars-holder .side-content .room-paxs-holder {
+  display: none;
+}
+.daterangepicker .calendars-holder .side-content .submit-area .rooms-paxs-cancel-btn {
+  display: none;
+}
+.daterangepicker .calendars-holder .submit-area {
+  display: block;
+  justify-content: flex-end;
+  padding: 0;
+  color: var(--rooms-paxs-button-text-color);
+  background: var(--days-holder-bg-color);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 105;
+}
+.daterangepicker .calendars-holder .submit-area .calendar-legend {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+  min-height: 30px;
+  width: 100%;
+  background: var(--mobile-legend-bg-color);
+  box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-bottom: 1px solid var(--legend-border-color);
+}
+.daterangepicker .calendars-holder .submit-area .calendar-legend .legend-item {
+  display: flex;
+  padding: 0 10px;
+}
+.daterangepicker .calendars-holder .submit-area .calendar-legend .legend-item .legend-text {
+  padding-right: 5px;
+  font-size: 14px;
+  align-self: center;
+  white-space: nowrap;
+  padding: 0 5px;
+}
+.daterangepicker .calendars-holder .submit-area .calendar-legend .legend-item.legend-arrival, .daterangepicker .calendars-holder .submit-area .calendar-legend .legend-item.legend-departure {
+  display: none;
+}
+.daterangepicker .calendars-holder .submit-area .calendar-legend .legend-item.legend-available {
+  margin: 0;
+  display: none;
+}
+.daterangepicker .calendars-holder .submit-area .calendar-legend .legend-item.legend-available .legend-icon {
+  background-color: var(--summery-dates-color);
+}
+.daterangepicker .calendars-holder .submit-area .calendar-legend .legend-item.legend-notavailable {
+  display: none;
+}
+.daterangepicker .calendars-holder .submit-area .calendar-legend .legend-item.legend-notavailable .legend-icon {
+  opacity: 0.3;
+}
+.daterangepicker .calendars-holder .submit-area .calendar-legend .legend-item.legend-holiday .legend-icon {
+  display: inline;
+  width: 36px;
+  height: 3px;
+  align-self: center;
+  background: var(--mobile-legend-holiday-mark-color);
+}
+.daterangepicker .calendars-holder .submit-area .calendar-legend .legend-item.legend-special-deal {
+  display: none;
+}
+.daterangepicker .calendars-holder .submit-area .calendar-legend .legend-item.legend-special-deal .legend-icon {
+  display: inline;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  align-self: center;
+  background: var(--mobile-legend-special-deal-mark-color);
+}
+.daterangepicker .calendars-holder .submit-area .calendar-legend .price-commnet {
+  align-self: center;
+  font-size: 0.8rem;
+}
+.daterangepicker .calendars-holder .submit-area .toast-and-buttons {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.daterangepicker .calendars-holder .submit-area .toast-and-buttons .toast:not(:last-child) {
+  margin-bottom: 7px;
+}
+.daterangepicker .calendars-holder .submit-area .toast-and-buttons .toast-item {
+  position: absolute;
+  padding: 0;
+  right: -5px;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--toast-text-color);
+  border-radius: 6px;
+  border: none;
+  padding: 10px 20px;
+  z-index: 12;
+}
+.daterangepicker .calendars-holder .submit-area .toast-and-buttons .toast-item.holiday-toast {
+  background: var(--holiday-toast-bg-color);
+  bottom: 54px;
+}
+.daterangepicker .calendars-holder .submit-area .toast-and-buttons .toast-item.min-nights-toast {
+  background: var(--alert-message-toast-holiday-first-color);
+  background: -moz-linear-gradient(left, var(--alert-message-toast-holiday-first-color) 0%, var(--alert-message-toast-holiday-second-color) 0%, var(--alert-message-toast-holiday-first-color) 100%, var(--alert-message-toast-holiday-second-color) 100%);
+  background: -webkit-linear-gradient(left, var(--alert-message-toast-holiday-first-color) 0%, var(--alert-message-toast-holiday-second-color) 0%, var(--alert-message-toast-holiday-first-color) 100%, var(--alert-message-toast-holiday-second-color) 100%);
+  background: linear-gradient(to right, var(--alert-message-toast-holiday-first-color) 0%, var(--alert-message-toast-holiday-second-color) 0%, var(--alert-message-toast-holiday-first-color) 100%, var(--alert-message-toast-holiday-second-color) 100%);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  color: var(--alert-message-toast-holiday-text-color);
+  bottom: 0px;
+  padding-left: 46px;
+}
+.daterangepicker .calendars-holder .submit-area .toast-and-buttons .toast-item.min-nights-toast:after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  background: url(../../common/images/toast-minimum-nights.png) no-repeat center;
+  width: 23px;
+  height: 19px;
+  top: 13px;
+}
+.daterangepicker .calendars-holder .submit-area .toast-and-buttons .toast-item.show {
+  animation: main-head 1s;
+  display: block !important;
+}
+.daterangepicker .calendars-holder .submit-area .toast-and-buttons .toast-item .toast-header {
+  padding: 0;
+}
+.daterangepicker .calendars-holder .submit-area .toast-and-buttons .toast-item .toast-body {
+  width: 100%;
+  padding: 0;
+}
+.daterangepicker .calendars-holder .submit-area .submit-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.daterangepicker .calendars-holder .submit-area .toast-header {
+  display: none;
+}
+.daterangepicker .calendars-holder .submit-area .toast-body {
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  font-size: 18px;
+  color: var(--alert-message-toast-holiday-text-color);
+  font-family: var(--main-font-bold);
+}
+.daterangepicker .calendars-holder .submit-area .toast-body .tooltip-inner {
+  background-color: transparent;
+}
+.daterangepicker .calendars-holder .submit-area .done-edit-button {
+  width: 90px;
+  height: 43px;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  float: left;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--done-edit-button-bg);
+  margin: 0 10px;
+  color: var(--done-editing-button-text-color);
+  outline: none !important;
+}
+.daterangepicker .calendars-holder .submit-area .cancel-btn {
+  width: 90px;
+  height: 43px;
+  background: var(--rooms-paxs-cancel-button-bg-color);
+  z-index: 11;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 10px;
+  cursor: pointer;
+  position: relative;
+  float: right;
+  border-radius: 6px;
+  display: none;
+}
+.daterangepicker .calendars-holder .calender-content {
+  width: 100%;
+  background: var(--datepickerrange-inner-bg-color);
+}
+.daterangepicker .calendars-holder .calender-content .dates-step {
+  display: none;
+}
+.daterangepicker .calendars-holder .calender-content .current-selected {
+  display: none;
+}
+.daterangepicker .calendars-holder .calender-content .calendar {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .top-calendar {
+  float: right;
+  font-family: var(--main-font);
+  font-size: var(--month-table-text-font-size);
+  color: var(--dates-button-text-color);
+  display: block;
+  width: 25%;
+  white-space: nowrap;
+  text-align: right;
+  clear: both;
+  margin: 0;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .top-calendar .month {
+  padding-right: 15px;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table {
+  width: 100%;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid var(--calendar-date-sep-color);
+  display: flex;
+  height: auto;
+  /*@if $align == 'left' {
+      height: 280px;
+  }
+  @else {
+      height: 330px;
+  }*/
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .div-body {
+  padding: 10px;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .div-head .div-row {
+  display: flex;
+  position: absolute;
+  width: 50%;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .div-head .div-row .dh {
+  border-right: none;
+  border-left: none;
+  width: 6vw;
+  float: right;
+  text-align: center;
+  display: none;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: calc((100vw - 20px) / 7);
+  height: calc((100vw - 20px) / 7);
+  float: right;
+  text-align: center;
+  font-family: var(--main-font-bold);
+  color: var(--daterangepicker-cell-text-color);
+  font-size: var(--daterangepicker-cell-font-size);
+  /*&:hover {
+      background-color: transparent !important;
+  }*/
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc .tooltip {
+  background-color: black;
+  opacity: 1;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc .main-date-span {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+  padding-top: 5px;
+  flex-direction: column;
+  border-radius: 0%;
+  z-index: 3;
+  overflow: hidden;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.disabled {
+  visibility: hidden;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.available {
+  background-color: var(--daterangepicker-cell-bg-color);
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.available .price-span {
+  color: var(--room-price-span-color);
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.holiday-day {
+  border-bottom: 2px solid var(--mobile-legend-holiday-mark-color);
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.disable-click, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.disable {
+  cursor: not-allowed;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.in-range {
+  background: none;
+  opacity: 1;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.in-range.in-range-end {
+  border-radius: 15px 0 0 15px;
+  background: none;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.in-range.available {
+  background-color: var(--daterangepicker-end-date-bg-color);
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.in-range.available ::after {
+  background: black;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.active.start-date {
+  background: none;
+  position: relative;
+  z-index: 0;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.active.start-date span {
+  background: var(--daterangepicker-start-date-bg-color);
+  color: var(--hotels-choose-window-header-text-color);
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.active.start-date:after {
+  content: " ";
+  background: var(--daterangepicker-cell-bg-color);
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  z-index: 1;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.active.end-date {
+  opacity: 1;
+  color: var(--end-date-text-color);
+  background: none;
+  z-index: 0;
+  position: relative;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.active.end-date .main-date-span {
+  border: 2px solid var(--daterangepicker-start-date-bg-color);
+  background: var(--daterangepicker-end-date-bg-color);
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.active.end-date:after {
+  content: " ";
+  background-color: var(--daterangepicker-cell-bg-color);
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  z-index: 1;
+  left: 0;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.active.end-date .date-span.price-span {
+  display: none;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.active.disabled {
+  background-color: var(--daterangepicker-end-date-bg-color);
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.disabled .price-span {
+  display: none;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.disabled, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.active, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.holiday-day, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month:hover, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.in-range, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.in-range-end {
+  background: transparent !important;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month:after, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.disabled:after, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.active:after, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.holiday-day:after, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month:hover:after, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.in-range:after, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.in-range-end:after {
+  display: none;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month:hover, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.disabled:hover, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.active:hover, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.holiday-day:hover, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month:hover:hover, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.in-range:hover, .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.off-other-month.in-range-end:hover {
+  background: transparent !important;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc span.price-span {
+  font-size: 12px;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc .sold-out {
+  font-size: 11px;
+}
+.daterangepicker .calendars-holder .calender-content .calendar .calendar-arrow {
+  display: none;
+}
+.daterangepicker .calendars-holder .calender-content .top-calendar-holder {
+  margin: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  background: var(--daterangepicker-cell-bg-color);
+  z-index: 10;
+  width: 100%;
+}
+.daterangepicker .calendars-holder .calender-content .top-calendar-holder .days-holder {
+  display: flex;
+  float: right;
+  justify-content: space-evenly;
+  width: 100%;
+  position: fixed;
+  top: 10%;
+  height: 25px;
+  font-size: var(--days-holder-font-size);
+  color: var(--days-holder-font-color);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  background: var(--days-holder-bg-color);
+  border-top: 1px solid var(--days-holder-font-color);
+  font-family: var(--main-font-bold);
+}
+.daterangepicker .calendars-holder .calender-content .top-calendar-holder .dates-and-reset-row {
+  background: none;
+  display: none;
+}
+.daterangepicker .calendars-holder .calender-content .top-calendar-holder .dates-and-reset-row .reset-button {
+  top: 10px;
+  background: var(--reset-button-color);
+}
+.daterangepicker .calendars-holder .calender-content .top-calendar-holder .dates-and-reset-row .dates-label-inputs {
+  float: right;
+  width: 100%;
+  display: none;
+  height: auto;
+  padding: 0;
+  border: none;
+}
+.daterangepicker .calendars-holder .calender-content .top-calendar-holder .dates-and-reset-row .dates-label-inputs .date-label, .daterangepicker .calendars-holder .calender-content .top-calendar-holder .dates-and-reset-row .dates-label-inputs .dates-select-label {
+  display: none;
+}
+.daterangepicker .calendars-holder .calender-content .top-calendar-holder .dates-and-reset-row .dates-label-inputs .start-date-label, .daterangepicker .calendars-holder .calender-content .top-calendar-holder .dates-and-reset-row .dates-label-inputs .end-date-label {
+  float: right;
+  padding: 0px;
+  width: 41%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1em;
+  text-align: right;
+  margin: 0;
+  border: none;
+  cursor: default;
+  pointer-events: none;
+}
+.daterangepicker .calendars-holder .calender-content .top-calendar-holder .dates-and-reset-row .dates-label-inputs .start-date-label.active .date-label, .daterangepicker .calendars-holder .calender-content .top-calendar-holder .dates-and-reset-row .dates-label-inputs .end-date-label.active .date-label {
+  color: var(--arrival-date-text-color);
+}
+.daterangepicker .calendars-holder .calender-content .calendar-tables-holder {
+  margin-top: 0;
+  max-height: calc(100vh - 30px);
+  overflow-y: auto;
+}
+.daterangepicker .calendars-holder .calender-content .bottom-calendar-holder {
+  text-align: center;
+  margin: 0;
+  position: relative;
+}
+.daterangepicker .calendars-holder .calender-content .bottom-calendar-holder .load-calendars {
+  display: none;
+}
+.daterangepicker .calendars-holder .calender-content .bottom-calendar-holder .apply-btn {
+  /* background-color: var(--search-button-color);
+  width: 100%;
+  height: 50px;
+  font-size: 1.875rem;
+  color: var(--daterangepicker-color);
+  border: 0;
+  border-radius: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+  line-height: 30px;
+  border: 5px solid #fff;*/
+  display: none;
+}
+.daterangepicker .calendars-holder .calender-content.dates-selected .calendar .calendar-table .dc.in-range {
+  background-color: var(--daterangepicker-end-date-bg-color);
+}
+.daterangepicker .calendars-holder .calender-content.dates-selected .calendar .calendar-table .dc.in-range.available {
+  background-color: var(--daterangepicker-end-date-bg-color);
+}
+.daterangepicker .calendars-holder .calender-content.dates-selected .calendar .calendar-table .dc.in-range.available ::after {
+  background: black;
+}
+.daterangepicker .calendars-holder .calender-content.dates-selected .calendar .calendar-table .dc.active.start-date {
+  background-color: var(--daterangepicker-end-date-bg-color);
+}
+.daterangepicker .calendars-holder .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-container button.action-button {
+  border-radius: 50%;
+  border: none;
+  min-width: 30px;
+  height: 30px;
+  margin: auto 7px;
+  background: var(--rooms-paxs-cancel-button-bg-color);
+  padding: 0;
+  outline: none;
+  font-size: 1.563rem;
+  text-align: center;
+}
+.daterangepicker .calendars-holder .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-container button.action-button.minus::before {
+  content: "-";
+  color: var(--rooms-paxs-button-text-color);
+}
+.daterangepicker .calendars-holder .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-container button.action-button.plus::before {
+  content: "+";
+  color: var(--rooms-paxs-button-text-color);
+}
+.daterangepicker .calendars-holder .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-container button.action-button.disable {
+  outline: none;
+  opacity: 0.4;
+  cursor: no-drop;
+}
+.daterangepicker .calendars-holder .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-container .popup-room-pax-row {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  right: 25%;
+  position: relative;
+}
+.daterangepicker .calendars-holder .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-container .popup-room-pax-row .room-pax-action, .daterangepicker .calendars-holder .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-container .popup-room-pax-row .room-pax-header {
+  margin: 10px 0;
+  width: auto;
+  font-size: 16px;
+  font-family: var(--main-font-bold);
+  display: flex;
+  line-height: 30px;
+}
+.daterangepicker .calendars-holder .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-container .popup-room-pax-row .room-pax-action .room-pax-tooltip, .daterangepicker .calendars-holder .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-container .popup-room-pax-row .room-pax-header .room-pax-tooltip {
+  padding: 0 5px;
+}
+.daterangepicker .calendars-holder .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-container .popup-room-pax-row .room-pax-action .count, .daterangepicker .calendars-holder .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-container .popup-room-pax-row .room-pax-header .count {
+  align-self: center;
+  margin: 0 6%;
+}
+.daterangepicker .calendars-holder .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-container .popup-room-pax-row .room-pax-header {
+  flex-direction: column;
+  line-height: 1.2;
+}
+.daterangepicker .calendars-holder .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-container .popup-room-pax-row .room-pax-header > span {
+  font-family: var(--main-font-title);
+}
+
+.container.relative.main-engine-page .nav-logo-holder {
+  display: none;
+}
+
+body .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .dc.active.disabled {
+  opacity: initial;
+}
+
+#booking-engine-holder {
+  width: 100%;
+  background: var(--mobile-engine-background-color);
+  position: absolute;
+  top: 90px;
+  right: 0;
+  z-index: 90;
+}
+#booking-engine-holder .engine-holder-header {
+  height: 50px;
+  background-color: var(--top-room-ttl-color);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#booking-engine-holder .engine-holder-header .book-your-stay-text {
+  color: var(--hotels-choose-window-header-text-color);
+  font-family: var(--main-font-title);
+  font-size: 1.375rem;
+  white-space: normal;
+}
+#booking-engine-holder .engine-holder-header .discount-rate-text {
+  color: var(--hotels-choose-window-header-discount-text-color);
+  font-family: var(--main-font-title);
+  font-size: 1.375rem;
+  white-space: normal;
+}
+#booking-engine-holder .engine-holder {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+#booking-engine-holder .engine-holder.engine-type-deal .new-promocode-box {
+  display: none;
+}
+#booking-engine-holder .engine-holder.engine-type-deal .promo-holder {
+  display: none;
+}
+#booking-engine-holder .engine-holder .check-out-date {
+  border-right: 0;
+}
+#booking-engine-holder .engine-holder .rooms-paxs-summery-holder {
+  display: flex;
+  font-size: 1.5rem;
+  font-family: var(--main-font);
+  color: var(--rooms-paxs-button-text-color);
+  width: 100%;
+  background: var(--rooms-paxs-button-bg-color);
+  align-items: center;
+  height: var(--height-input-engeine);
+  line-height: 25px;
+  background: url("../../common/images/selectarrow.png") no-repeat center left 12px var(--hotel-choosing-select-bg-color);
+}
+#booking-engine-holder .engine-holder .rooms-paxs-summery-holder .rooms-paxs-sep {
+  /*  width: 1px;
+  height: 65%;
+  display: block;
+  position: relative;
+  background: $rooms-paxs-sep-color;*/
+  display: none;
+}
+#booking-engine-holder .engine-holder .rooms-paxs-summery-holder .rooms-paxs-summery {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  white-space: nowrap;
+  font-size: 1rem;
+  line-height: 1.2;
+  align-items: center;
+  padding-right: 15px;
+}
+#booking-engine-holder .engine-holder .rooms-paxs-summery-holder .rooms-paxs-summery .guests-number {
+  font-size: 2.5rem;
+  pointer-events: none;
+  padding-left: 10px;
+  font-family: var(--main-font-light);
+}
+#booking-engine-holder .engine-holder .rooms-paxs-summery-holder .pax-label-title {
+  /*   font-size: 1rem;
+  text-align: $align;
+  width: 25vw;
+  padding-right: 12px;*/
+  display: none;
+}
+#booking-engine-holder .engine-holder .promo-holder {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+#booking-engine-holder .engine-holder .promo-holder .promo-label {
+  font-family: var(--main-font);
+  font-size: 16px;
+}
+#booking-engine-holder .engine-holder .promo-holder .promo-input-holder {
+  height: 100%;
+}
+#booking-engine-holder .engine-holder .promo-holder .promo-input-holder #promo {
+  width: 100%;
+  border: none;
+  height: 3rem;
+  text-align: center;
+  font-family: var(--main-font);
+  font-size: 1rem;
+}
+#booking-engine-holder .engine-holder .promo-holder .promo-input-holder #promo:focus, #booking-engine-holder .engine-holder .promo-holder .promo-input-holder #promo:active {
+  outline: none !important;
+}
+#booking-engine-holder .engine-holder .bottom-engine-holder {
+  width: 100%;
+}
+#booking-engine-holder .engine-holder .bottom-engine-holder .engine-button-row .search-button {
+  display: block;
+  width: 100%;
+  height: var(--mobile-search-button-height);
+  border-radius: var(--mobile-search-button-radius);
+  background-color: var(--search-button-bg);
+  font-family: var(--main-font);
+  font-size: var(--search-btn-font-size);
+  padding: 0 10px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: var(--search-button-text-color);
+  outline: none !important;
+  border-color: var(--search-button-border-color);
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 0 0 0 0 rgba(var(--main-color), 0.7);
+  transition: all 300ms ease-in-out;
+}
+#booking-engine-holder .engine-holder .bottom-engine-holder .engine-button-row .search-button.animate-indication {
+  animation: indicate-button 800ms 3;
+}
+#booking-engine-holder .engine-holder .bottom-engine-holder .new-promocode-box a {
+  text-decoration: underline !important;
+}
+#booking-engine-holder .engine-holder .bottom-engine-holder .new-promocode-box #promoNew .promo-holder {
+  margin-top: 15px;
+}
+#booking-engine-holder .engine-holder .bottom-engine-holder .new-promocode-box #promoNew .BtnArea {
+  display: flex;
+  justify-content: end;
+  margin-top: 15px;
+}
+#booking-engine-holder .engine-holder .bottom-engine-holder .new-promocode-box #promoNew .BtnArea .approvePromo {
+  background: none;
+  border-radius: 3px;
+  width: 85px;
+  height: 40px;
+  text-align: center;
+  color: black;
+  line-height: 40px;
+  cursor: pointer;
+  position: relative;
+  top: -60px;
+  content: "x";
+}
+#booking-engine-holder .engine-holder .bottom-engine-holder .new-promocode-box #promoNew .BtnArea .cancelPromo {
+  width: 85px;
+  height: 40px;
+  border: 1px solid #D6D6D6;
+  border-radius: 3px;
+  text-align: center;
+  color: black;
+  line-height: 40px;
+  cursor: pointer;
+  display: none;
+}
+#booking-engine-holder .engine-holder .resort-holder {
+  width: 100%;
+  align-self: center;
+  color: var(--hotel-choosing-select-text-color);
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder {
+  display: flex;
+  text-align: right;
+  font-size: 1.125rem;
+  font-family: var(--main-font);
+  background: var(--hotel-choosing-select-bg-color);
+  align-items: center;
+  height: var(--height-input-engeine);
+  background: url(images/selectarrow.png) no-repeat center left 12px #fff;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotel-initial-text {
+  padding-right: 12px;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div .select-region-holder {
+  margin-top: 1rem;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  top: 1rem;
+  background: var(--hotels-select-bg);
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  max-height: calc(100vh - 65px);
+  overflow: auto;
+  padding-top: 1rem;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .all-hotel-select {
+  text-align: right;
+  pointer-events: none;
+  font-family: var(--main-font-bold);
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .hotel-select {
+  white-space: normal;
+  margin-bottom: 0;
+  align-items: center;
+  display: inline-flex;
+  align-self: stretch;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .hotel-select .hotelName {
+  font-size: 16px;
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  margin: 0 5px;
+  line-height: 1.3;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .hotel-select .hotelName.chosen-hotel, #booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .hotel-select .hotelName:hover {
+  background-color: var(--hotel-choosing-border-color);
+  color: var(--hotel-choosing-text-color);
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .close-hotels-list {
+  left: 0;
+  position: absolute;
+  width: auto;
+  font-size: 26px;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .chooser-header > div {
+  align-items: center;
+  justify-content: space-between;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .chooser-header .close-hotels-list {
+  border: none;
+  background-color: transparent;
+  text-align: left;
+  font-size: 2rem;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .choose-hotels-label {
+  text-align: right;
+  white-space: nowrap;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .hotels-list-close-div {
+  width: 100%;
+  height: 20%;
+  display: block;
+  border-top: 1px dashed var(--room-price-span-color);
+  padding: 15px;
+  position: sticky;
+  bottom: 0;
+  background-color: var(--daterangepicker-cell-bg-color);
+  box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.2);
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .hotels-list-close-div .cancel-btn {
+  min-width: 90px;
+  height: 45px;
+  background: #e1e1e1;
+  z-index: 11;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  float: left;
+  line-height: 45px;
+  border-radius: 6px;
+  padding: 0 20px;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .resort-cohise-sep {
+  /*width: 1px;
+  height: 65%;
+  position: relative;
+  display: block;*/
+  display: none;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder label {
+  margin: 0;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotel-header {
+  font-size: 1rem;
+  text-align: right;
+  width: 20vw;
+  padding-right: 12px;
+  display: none;
+}
+#booking-engine-holder .engine-holder .resort-holder select {
+  border: none;
+  height: 50px;
+  width: 53%;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(images/selectarrow.png) no-repeat center left var(--hotel-choosing-select-bg-color);
+}
+#booking-engine-holder .engine-holder .dates-holder {
+  display: flex;
+  position: relative;
+  font-family: var(--main-font);
+  color: var(--dates-button-text-color);
+  font-size: 1rem;
+  width: 100%;
+  background-color: var(--daterangepicker-calendar-bg-color);
+  background: url(images/selectarrow.png) no-repeat center left 12px var(--hotel-choosing-select-bg-color);
+  height: var(--height-input-engeine);
+  align-items: center;
+  flex-grow: 0.5;
+}
+#booking-engine-holder .engine-holder .dates-holder .dates-dispaly {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 25px);
+  padding-right: 15px;
+}
+#booking-engine-holder .engine-holder .dates-holder .dates-dispaly .check-in-date, #booking-engine-holder .engine-holder .dates-holder .dates-dispaly .check-out-date {
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+}
+#booking-engine-holder .engine-holder .dates-holder .dates-dispaly .dates-sep {
+  width: 1px;
+  height: 35px;
+  position: relative;
+  display: inline-block;
+  background: var(--calendar-date-sep-color);
+  vertical-align: sub;
+  margin: 0;
+}
+#booking-engine-holder .engine-holder .dates-holder .dates-dispaly .dates-sep:first-child {
+  display: none;
+}
+#booking-engine-holder .engine-holder .dates-holder #dates {
+  display: none;
+}
+#booking-engine-holder .engine-holder .dates-holder .dates-text {
+  display: none;
+}
+#booking-engine-holder .engine-holder .dates-holder .day {
+  font-size: 2.5rem;
+  pointer-events: none;
+  font-family: var(--main-font-light);
+  padding-left: 10px;
+}
+#booking-engine-holder .hotel-select-dd .engine-holder .resort-holder #SelectHotelHolder {
+  position: relative;
+}
+#booking-engine-holder .hotel-select-dd .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row {
+  max-width: none;
+  width: 100%;
+  max-height: 502px;
+  padding: 0px;
+  transform: translateY(55px);
+  right: 10px;
+}
+#booking-engine-holder .hotel-select-dd .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .all-hotel-select {
+  font-weight: bold;
+}
+#booking-engine-holder .hotel-select-dd .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .select-region-holder {
+  margin-top: 0px;
+}
+#booking-engine-holder .hotel-select-dd .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .all-regions {
+  display: none;
+}
+#booking-engine-holder .hotel-select-dd .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .chooser-header > div {
+  justify-content: end;
+}
+#booking-engine-holder .hotel-select-dd .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .hotel-select {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0px;
+}
+#booking-engine-holder .hotel-select-dd .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .choose-hotels-label {
+  display: none;
+}
+#booking-engine-holder .hotel-select-dd .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .close-hotels-list {
+  position: relative;
+}
+
+/*=================== small mobile fix =============================*/
+@media (max-width: 991px) {
+  .results-module {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .cal0 {
+    margin-top: 30% !important;
+  }
+  .room-paxs-content {
+    padding-bottom: 40%;
+    width: 100%;
+  }
+  .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .div-body {
+    padding: 0;
+  }
+  .daterangepicker .calendars-holder .calender-content .calendar .calendar-table .div-table .div-body .div-row {
+    justify-content: center;
+  }
+  .engine-open {
+    overflow: hidden;
+  }
+  .new-promocode-box {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  #booking-engine-holder .engine-holder #promoNew .promo-holder .promo-input-holder #promo {
+    text-align: start;
+    padding: 0 50px;
+  }
+  #booking-engine-beproc #booking-engine-holder.usePromoCodeNew {
+    min-height: 340px;
+  }
+  #booking-engine-holder .engine-holder .bottom-engine-holder .new-promocode-box #promoNew .BtnArea {
+    height: 0px;
+  }
+  #booking-engine-holder .simplex-main-engine-holder .engine-holder #SelectHotelHolder, #booking-engine-holder .simplex-main-engine-holder .engine-holder .rooms-paxs-summery, #booking-engine-holder .simplex-main-engine-holder .engine-holder #promo, #booking-engine-holder .simplex-main-engine-holder .engine-holder .dates-holder {
+    border: 1px solid #ccc !important;
+  }
+  #booking-engine-holder .engine-holder .rooms-paxs-summery-holder .rooms-paxs-summery {
+    height: 100% !important;
+  }
+  .main-menu-holder {
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+/*=================== Desktop =============================*/
+@media (min-width: 991px) {
+  body.scrolled-engine #booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row {
+    transform: translateY(105px);
+  }
+  #booking-engine-beproc #booking-engine-holder.usePromoCodeNew {
+    height: 90px;
+  }
+  #booking-engine-beproc #booking-engine-holder.usePromoCodeNew .engine-holder .bottom-engine-holder {
+    position: relative;
+  }
+  #booking-engine-beproc #booking-engine-holder.usePromoCodeNew .new-promocode-box {
+    flex-wrap: unset;
+  }
+  #booking-engine-holder {
+    margin: 0 auto;
+    z-index: 100;
+  }
+  #booking-engine-holder .engine-holder {
+    flex-direction: row;
+    display: flex;
+    gap: 10px;
+  }
+  #booking-engine-holder .engine-holder .select-hotel-holder, #booking-engine-holder .engine-holder .check-in-date, #booking-engine-holder .engine-holder .check-out-date, #booking-engine-holder .engine-holder .rooms-paxs-summery-holder, #booking-engine-holder .engine-holder .promo-holder, #booking-engine-holder .engine-holder .search-button {
+    border: 1px solid #c4c4c4;
+  }
+  #booking-engine-holder .engine-holder .resort-holder {
+    width: auto;
+    cursor: pointer;
+    flex-basis: 150px;
+    flex-grow: 1;
+  }
+  #booking-engine-holder .engine-holder .resort-holder .hotel-selector-label {
+    height: 22px;
+    font-size: 1rem;
+    position: relative;
+    font-family: var(--main-font-bold);
+  }
+  #booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder {
+    text-align: right;
+    background: url(images/selectarrow.png) no-repeat center left 12px #fff;
+    padding-inline-start: 10px;
+  }
+  #booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotel-initial-text {
+    padding: 0;
+  }
+  #booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotel-header {
+    display: none;
+  }
+  #booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder label {
+    font-size: 18px;
+  }
+  #booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row {
+    transform: translateY(50px);
+    cursor: pointer;
+    width: 100%;
+    max-width: 1140px;
+    height: auto;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    margin: 0;
+    z-index: 10;
+  }
+  #booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .choose-hotels-top {
+    background: var(--top-room-ttl-color);
+    text-align: right;
+    margin: 0;
+    height: 36px;
+  }
+  #booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .choose-hotels-top .book-your-stay-text {
+    color: var(--hotels-choose-window-header-text-color);
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+  }
+  #booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .choose-hotels-top .discount-rate-text {
+    color: var(--hotels-choose-window-header-discount-text-color);
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+  }
+  #booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .choose-hotels-label {
+    white-space: nowrap;
+    padding: 0;
+    padding-right: 10px;
+    margin-bottom: 0;
+  }
+  #booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .hotel-select .hotelName {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    white-space: nowrap;
+    border: none;
+    background-color: transparent;
+  }
+  #booking-engine-holder .engine-holder .dates-holder {
+    width: auto;
+    align-self: center;
+    cursor: pointer;
+    flex-basis: 300px;
+    height: var(--height-input-engeine);
+  }
+  #booking-engine-holder .engine-holder .dates-holder .dates-text {
+    position: absolute;
+    bottom: 50px;
+    font-family: var(--main-font-bold);
+    font-size: 1rem;
+    padding: 0;
+  }
+  #booking-engine-holder .engine-holder .dates-holder .dates-dispaly {
+    width: 100%;
+    height: 100%;
+    padding-right: 0px !important;
+    border: 1px solid #c4c4c4;
+  }
+  #booking-engine-holder .engine-holder .dates-holder .dates-dispaly .dates-sep {
+    height: 100%;
+  }
+  #booking-engine-holder .engine-holder .dates-holder .dates-dispaly .dates-sep:first-child {
+    display: none;
+  }
+  #booking-engine-holder .engine-holder .dates-holder .dates-dispaly .check-in-date, #booking-engine-holder .engine-holder .dates-holder .dates-dispaly .check-out-date {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    width: 60%;
+    justify-content: flex-start;
+    text-align: center;
+    height: 100%;
+    text-align: right;
+    padding: 12px;
+    padding-left: 20px;
+    border: none;
+  }
+  #booking-engine-holder .engine-holder .rooms-paxs-summery-holder {
+    position: relative;
+    width: auto;
+    font-size: 16px;
+    align-self: center;
+    cursor: pointer;
+    background: url(images/selectarrow.png) no-repeat center left 12px var(--hotel-choosing-select-bg-color);
+    flex-basis: 150px;
+  }
+  #booking-engine-holder .engine-holder .rooms-paxs-summery-holder .pax-label-title {
+    position: absolute;
+    bottom: 50px;
+    font-family: var(--main-font-bold);
+    font-size: 16px;
+    padding: 0;
+  }
+  #booking-engine-holder .engine-holder .rooms-paxs-summery-holder .rooms-paxs-sep {
+    display: none;
+  }
+  #booking-engine-holder .engine-holder .rooms-paxs-summery-holder .rooms-paxs-summery {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  #booking-engine-holder .engine-holder .rooms-paxs-summery-holder .rooms-paxs-summery .guests-number {
+    display: block;
+    width: auto;
+    padding: 12px;
+  }
+  #booking-engine-holder .engine-holder .promo-holder {
+    width: auto;
+    align-self: center;
+    cursor: pointer;
+    flex-basis: 110px;
+    height: var(--height-input-engeine);
+  }
+  #booking-engine-holder .engine-holder .promo-holder .promo-input-holder #promo {
+    height: 100%;
+  }
+  #booking-engine-holder .engine-holder .bottom-engine-holder {
+    width: auto;
+    align-self: center;
+    height: var(--height-input-engeine);
+  }
+  #booking-engine-holder .engine-holder .bottom-engine-holder .engine-button-row .search-button {
+    height: 54px;
+    height: var(--desktop-search-button-height);
+    border-radius: var(--desktop-search-button-radius);
+    background-color: var(--desktop-search-button-bg);
+    font-family: var(--main-font);
+    font-size: var(--desktop-search-btn-font-size);
+    padding: 0 10px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: var(--desktop-search-button-text-color);
+    outline: none !important;
+    border-color: var(--desktop-search-button-border-color);
+    border-width: 2px;
+    box-shadow: 0 0 0 0 rgba(var(--main-color), 0.7);
+  }
+  #booking-engine-holder .engine-holder .bottom-engine-holder .engine-button-row .search-button:focus {
+    border: 2px solid var(--desktop-search-button-border-color) !important;
+  }
+  #booking-engine-holder .engine-holder .bottom-engine-holder .new-promocode-box {
+    position: absolute;
+    left: 0px;
+    white-space: nowrap;
+  }
+  #booking-engine-holder .engine-holder .bottom-engine-holder .new-promocode-box a {
+    text-decoration: underline !important;
+    font-size: 14px;
+    color: inherit;
+  }
+  #booking-engine-holder .engine-holder .bottom-engine-holder .new-promocode-box #promoNew {
+    position: absolute;
+    top: 100%;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    float: unset;
+    width: 220px;
+    height: 131px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    left: 0px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  #booking-engine-holder .engine-holder .bottom-engine-holder .new-promocode-box #promoNew .promo-holder {
+    margin-top: 15px;
+  }
+  #booking-engine-holder .engine-holder .bottom-engine-holder .new-promocode-box #promoNew .BtnArea {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 10px 0 10px;
+    flex-direction: row-reverse;
+  }
+  #booking-engine-holder .engine-holder .bottom-engine-holder .new-promocode-box #promoNew .BtnArea .approvePromo {
+    background: var(--new-promo-bg);
+    border-radius: 3px;
+    width: 85px;
+    height: 40px;
+    text-align: center;
+    color: var(--new-promo-color);
+    line-height: 40px;
+    cursor: pointer;
+    display: block;
+    position: static;
+  }
+  #booking-engine-holder .engine-holder .bottom-engine-holder .new-promocode-box #promoNew .BtnArea .cancelPromo {
+    width: 85px;
+    height: 40px;
+    border: 1px solid #D6D6D6;
+    border-radius: 3px;
+    text-align: center;
+    color: black;
+    line-height: 40px;
+    cursor: pointer;
+    display: block;
+  }
+  #booking-engine-holder .calendars-holder {
+    padding: 15px;
+  }
+  .price-commnet {
+    font-size: 1rem !important;
+  }
+  .daterangepicker {
+    position: fixed;
+  }
+  .daterangepicker.room-paxs-click {
+    position: fixed;
+    width: 20%;
+    float: none;
+    height: auto;
+    margin: 0 auto;
+    left: 17% !important;
+    right: auto !important;
+    margin-top: 99px;
+    padding: 0;
+    top: unset !important;
+  }
+  .daterangepicker.room-paxs-click .container {
+    padding: 0;
+  }
+  .daterangepicker.room-paxs-click .calendars-holder {
+    width: 100%;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    float: unset;
+    position: relative;
+  }
+  .daterangepicker.room-paxs-click .calendars-holder .side-content {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: block;
+    height: auto;
+  }
+  .daterangepicker.room-paxs-click .calendars-holder .side-content .room-paxs-holder {
+    width: auto;
+    min-height: unset;
+  }
+  .daterangepicker.room-paxs-click .calendars-holder .side-content .room-paxs-holder .rooms-paxs-step {
+    display: none;
+  }
+  .daterangepicker.room-paxs-click .calendars-holder .side-content .room-paxs-holder .room-paxs-content .popup-room-pax-holder .room-pax-holder-row {
+    min-height: 100px;
+  }
+  .daterangepicker.room-paxs-click .calendars-holder .side-content .room-paxs-holder .room-paxs-content .remove-room-panel {
+    bottom: auto;
+    top: 45px;
+    left: 3%;
+    cursor: pointer;
+    border: none;
+  }
+  .daterangepicker.room-paxs-click .calendars-holder .side-content .room-paxs-holder .room-paxs-content .room-pax-header {
+    flex-direction: row;
+  }
+  .daterangepicker.room-paxs-click .calendars-holder .side-content .room-paxs-holder .room-paxs-content .room-title {
+    right: 5%;
+  }
+  .daterangepicker.room-paxs-click .calendars-holder .side-content .submit-area {
+    position: relative;
+    width: auto;
+    top: 0;
+  }
+  .daterangepicker.calendars-click {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    float: none;
+    padding: 0;
+  }
+  .daterangepicker.calendars-click .calendars-holder {
+    float: none;
+    width: 100%;
+    max-width: 900px;
+    height: 475px;
+    position: fixed;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    top: 75px;
+    overflow: hidden;
+  }
+  .daterangepicker.calendars-click .calendars-holder .side-content {
+    height: auto;
+    display: flex;
+    position: absolute;
+  }
+  .daterangepicker.calendars-click .calendars-holder .side-content .ranges {
+    position: absolute;
+    height: auto;
+  }
+  .daterangepicker.calendars-click .calendars-holder .side-content .ranges .summery-dates {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--arrival-leave-bottom-border-color);
+    height: 40px;
+  }
+  .daterangepicker.calendars-click .calendars-holder .side-content .ranges .summery-dates .summery-date .part2 .summery-week-day {
+    display: inline-block;
+  }
+  .daterangepicker.calendars-click .calendars-holder .side-content .ranges .summery-dates .summery-nights {
+    display: inline-flex;
+    justify-content: center;
+    width: 10%;
+    /*margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 4.5vh;*/
+    color: var(--mobile-legend-special-deal-mark-color);
+    font-size: 18px;
+    order: 1;
+    display: none;
+  }
+  .daterangepicker.calendars-click .calendars-holder .side-content .ranges .summery-dates .check-in {
+    order: 2;
+    padding: 0;
+    width: auto;
+    display: none;
+  }
+  .daterangepicker.calendars-click .calendars-holder .side-content .ranges .summery-dates .start-end-dates-seperator {
+    order: 3;
+    width: 5vw;
+    display: none;
+  }
+  .daterangepicker.calendars-click .calendars-holder .side-content .ranges .summery-dates .check-out {
+    order: 4;
+    padding: 0;
+    display: none;
+  }
+  .daterangepicker.calendars-click .calendars-holder .close-desktop-calendar {
+    position: absolute;
+    left: 15px;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content {
+    position: relative;
+    align-self: center;
+    margin: 0 auto;
+    top: 50px;
+    overflow: hidden;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar {
+    margin: 0;
+    justify-content: space-evenly;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar .calendar-arrow {
+    display: block;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar .calendar-arrow .arrow {
+    width: 12px;
+    height: 22px;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar .calendar-arrow .arrow.disable {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar .calendar-arrow .arrow .glyphicon {
+    color: transparent;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar .calendar-arrow .arrow.prev {
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 35px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--desktop-months-arrows-font-color);
+    z-index: 10;
+    background: no-repeat url("data:image/svg+xml,%3Csvg width='12' height='22' viewBox='0 0 12 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='1' y1='-1' x2='14.1316' y2='-1' transform='matrix(-0.715235 0.698884 0.715235 0.698884 12 10.9248)' stroke='%23505050' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='1' y1='-1' x2='14.1316' y2='-1' transform='matrix(-0.715235 -0.698884 -0.715235 0.698884 10.8228 12.0752)' stroke='%23505050' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar .calendar-arrow .arrow.prev::before {
+    font-size: 1rem;
+    content: "הקודם";
+    position: absolute;
+    right: 20px;
+    top: 2px;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar .calendar-arrow .arrow.next {
+    position: absolute;
+    top: 0;
+    left: 35px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--desktop-months-arrows-font-color);
+    z-index: 10;
+    outline: none !important;
+    border: none;
+    background: no-repeat url("data:image/svg+xml,%3Csvg width='12' height='22' viewBox='0 0 12 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='1' y1='-1' x2='13.9888' y2='-1' transform='matrix(0.708671 0.705539 -0.708671 0.705539 0 10.9248)' stroke='%23505050' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='1' y1='-1' x2='13.9888' y2='-1' transform='matrix(0.708671 -0.705539 0.708671 0.705539 1.37793 12.0752)' stroke='%23505050' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar .calendar-arrow .arrow.next::before {
+    font-size: 1rem;
+    content: "הבא";
+    position: absolute;
+    left: 20px;
+    top: 2px;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar .calendar-table {
+    width: 100%;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar .calendar-table .div-table {
+    border: none;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar .calendar-table .div-table .div-head .div-row .dh {
+    width: 2vw;
+    display: inline;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar .calendar-table .div-table .dc {
+    width: 14.28%;
+    height: 50px;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar .calendar-table .div-table .dc > .main-date-span {
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar .calendar-table .div-table .div-body {
+    width: 100%;
+    margin-top: 2%;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .top-calendar-holder .days-holder {
+    display: none;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar-tables-holder {
+    margin: 0 auto;
+    display: flex;
+    width: auto;
+    align-self: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar-tables-holder.anim-h {
+    float: right;
+    position: relative;
+    overflow: hidden;
+    transform: translate(20%, 0);
+    -moz-transition: transform 500ms ease;
+    -ms-transition: transform 500ms ease;
+    -o-transition: transform 500ms ease;
+    transition: transform 500ms ease;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar-tables-holder .calendar:nth-of-type(1) {
+    border-left: 1px solid var(--calendar-date-sep-color);
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .calendar-tables-holder .calendar .calendar-table .top-calendar {
+    float: none;
+    align-self: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 4%;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .bottom-calendar-holder .load-calendars {
+    display: none;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .bottom-calendar-holder .calendar-legend {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    box-shadow: none;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .bottom-calendar-holder .calendar-legend .legend-item.legend-holiday {
+    width: 15%;
+  }
+  .daterangepicker.calendars-click .calendars-holder .calender-content .bottom-calendar-holder .calendar-legend .legend-item.legend-special-deal {
+    width: 15%;
+  }
+  .daterangepicker.calendars-click .calendars-holder .submit-area {
+    padding-top: 1%;
+    margin: 0;
+    position: relative;
+    display: block;
+    top: 435px;
+    width: 100%;
+    box-shadow: none;
+  }
+  .daterangepicker.calendars-click .calendars-holder .submit-area .calendar-legend {
+    box-shadow: none;
+    border-top: 1px solid var(--legend-border-color);
+    position: static !important;
+  }
+  .daterangepicker.calendars-click .calendars-holder .submit-area .toast-and-buttons {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -60px;
+  }
+}
+@media (min-device-width: 1200px) and (max-device-width: 1600px) {
+  .daterangepicker.calendars-click .calendars-holder .submit-area {
+    padding: 0;
+  }
+  .daterangepicker.calendars-click .calendars-holder .submit-area .min-nights-holiday-toast {
+    bottom: 0.5vh;
+  }
+  .daterangepicker.room-paxs-click .calendars-holder {
+    width: 140%;
+  }
+  #booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .hotel-select .hotelName {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .daterangepicker.room-paxs-click {
+    width: 35%;
+  }
+}
+@-webkit-keyframes main-head {
+  0% {
+    right: -20em;
+  }
+  100% {
+    right: 0;
+  }
+}
+@-moz-keyframes main-head {
+  0% {
+    right: -20em;
+  }
+  100% {
+    right: 0;
+  }
+}
+@-o-keyframes main-head {
+  0% {
+    right: -20em;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes main-head {
+  0% {
+    right: -20em;
+  }
+  100% {
+    right: 0;
+  }
+}
+/*#preview-area, #more-month-area {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 40px;
+    left: 140px;
+    bottom: 60px;
+    right: 0;
+    margin: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .sk-folding-cube {
+        margin: 20px auto;
+        width: 60px;
+        height: 60px;
+        position: relative;
+        -webkit-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+
+        .sk-cube {
+            float: left;
+            width: 50%;
+            height: 50%;
+            position: relative;
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        .sk-cube:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0998D6;
+            -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+            animation: sk-foldCubeAngle 2.4s infinite linear both;
+            -webkit-transform-origin: 100% 100%;
+            -ms-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+
+        .sk-cube2 {
+            -webkit-transform: scale(1.1) rotateZ(90deg);
+            transform: scale(1.1) rotateZ(90deg);
+        }
+
+        .sk-cube3 {
+            -webkit-transform: scale(1.1) rotateZ(180deg);
+            transform: scale(1.1) rotateZ(180deg);
+        }
+
+        .sk-cube4 {
+            -webkit-transform: scale(1.1) rotateZ(270deg);
+            transform: scale(1.1) rotateZ(270deg);
+        }
+
+        .sk-cube2:before {
+            -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+        }
+
+        .sk-cube3:before {
+            -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+        }
+
+        .sk-cube4:before {
+            -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;
+        }
+    }
+}*/
+#more-month-area, #preview-area {
+  display: none;
+  /* z-index: 1000;
+  left: 0;
+  top: -242px;*/
+}
+
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes indicate-button {
+  to {
+    box-shadow: 0 0 0 10px rgba(var(--main-color), 0);
+  }
+}
+@-moz-keyframes indicate-button {
+  to {
+    box-shadow: 0 0 0 10px rgba(var(--main-color), 0);
+  }
+}
+@-ms-keyframes indicate-button {
+  to {
+    box-shadow: 0 0 0 10px rgba(var(--main-color), 0);
+  }
+}
+@keyframes indicate-button {
+  to {
+    box-shadow: 0 0 0 10px rgba(var(--main-color), 0);
+  }
+}
+/*fonts*/
+@font-face {
+  font-family: "FBPENELOPE-REGULAR";
+  font-display: swap;
+  src: url("fonts/fbpenelope-regularwebfont.woff") format("woff");
+}
+@font-face {
+  font-family: "FBPENELOPE-LIGHT";
+  font-display: swap;
+  src: url("fonts/FBPENELOPE-LIGHT.woff") format("woff");
+}
+@font-face {
+  font-family: "FBPENELOPE-BOLD";
+  font-display: swap;
+  src: url("fonts/FBPENELOPE-BOLD.woff") format("woff");
+}
+@font-face {
+  font-family: "Heebo-Regular";
+  font-display: swap;
+  src: url("fonts/Heebo-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Heebo-Bold";
+  font-display: swap;
+  src: url("fonts/Heebo-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Heebo-Medium";
+  font-display: swap;
+  src: url("fonts/Heebo-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Heebo-Light";
+  font-display: swap;
+  src: url("../fonts/Heebo-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Assistant-Regular";
+  src: url("../../fonts/Assistant-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RacingSansOne-Regular";
+  src: url("../../fonts/RacingSansOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url("../../fonts/Raleway-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Assistant-Bold";
+  src: url("../../fonts/Assistant-Bold.ttf") format("truetype"), url("../../fonts/Assistant-ExtraLight.ttf") format("truetype"), url("../../fonts/Assistant-Light.ttf") format("truetype"), url("../../fonts/Assistant-Regular.ttf") format("truetype"), url("../../fonts/Assistant-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Assistant-Light";
+  src: url("../../fonts/Assistant-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Assistant-SemiBold";
+  src: url("../../fonts/Assistant-SemiBold.ttf") format("truetype");
+}
+.daterangepicker {
+  direction: rtl;
+}
+.daterangepicker .calendars-holder .submit-area .done-edit-button {
+  border-radius: 0;
+}
+
+/*********************************** Mobile *******************/
+/*********************************** Desktop *******************/
+/*********************************** Laptop *******************/
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Content/Chains/DefaultTheme/_fonts.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Content/daterangerpicker.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Content/default_layout_vars/_layout.css%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Content/default_layout_vars/_daterangepickervars.css%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Scripts/libs/bootstrap-4.3.1/scss/_root.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Scripts/libs/bootstrap-4.3.1/scss/_reboot.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Scripts/libs/bootstrap-4.3.1/scss/_variables.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Scripts/libs/bootstrap-4.3.1/scss/vendor/_rfs.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Scripts/libs/bootstrap-4.3.1/scss/mixins/_hover.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Scripts/libs/bootstrap-4.3.1/scss/_grid.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Scripts/libs/bootstrap-4.3.1/scss/mixins/_grid.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Scripts/libs/bootstrap-4.3.1/scss/mixins/_breakpoints.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Scripts/libs/bootstrap-4.3.1/scss/mixins/_grid-framework.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Scripts/libs/bootstrap-4.3.1/scss/_toasts.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Scripts/libs/bootstrap-4.3.1/scss/mixins/_border-radius.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Scripts/libs/bootstrap-4.3.1/scss/utilities/_display.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Content/Chains/DefaultTheme/_vars-rtl.scss%22,%22file:///C:/Projects/BookingProcess2020/BookingProcess2020/Content/Chains/DefaultTheme/_ChainDaterangepicker.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22;AAAC;EACG;EACA;EACA;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;EACA;;AAGJ;EACI;EACA;;AAGJ;EACI;EACA;;AAGJ;EACI;EACA;;AAGJ;EACI;EACA;;AAGJ;EACI;EACA;;ACrEH;ACAA;AACG;AACA;EACA;EACA;EACA;AACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;AACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEJ;AAEA;EACI;EACA;;;AAEJ;AACA;AACA;AACI;EACA;EACA;EACA;EACA;EACA;EACA;AACA;AACA;EACA;EACA;EACA;EACA;AACA;AACA;EACA;EACA;EACA;EACA;AACA;AACA;EACA;EACA;EACA;EACA;AACA;AACA;EACA;EACA;EACA;EACA;AACA;;;AAEJ;AC9GC;EACG;EACA;AACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;AACA;EACA;EACA;EACA;AACA;EACA;EACA;EACA;EACA;EACA;AACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;AACA;EACA;EACA;EACA;EACA;AACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;AACA;EACA;EACA;EACA;EACA;EACA;AACA;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAUA;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAaA;EACA;EACA;E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;AAEA;EACI;;AAGJ;EACI;;AAGJ;EACI,OerMC;EfsMD;EACA;EACA;EACA;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;AAGJ;EACI;;AAKA;EACI;;AAGJ;EACI;;AAGJ;EA6BI;EACA;;AA5BA;EACI;EACA;;AAEA;EACI;;AAGJ;EACI;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA,Oe5PX;Ef6PW;;AAOR;EACI;EACA;;AAEA;EACI;EACA;;AAEA;EACI;;AAGJ;EACI;EACA;EACA,OenRf;EfoRe;EACA;EACA;;AAIR;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;;AAEA;EACI;EACA;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAIR;EACI;;AAGJ;EAEQ;EAMJ;EACA;EACA;EACA;EACA;EACA;EACA,Oe7Uf;Ef8Ue;EACA;EACA;;AAEA;EACI;;AAGJ;EACI;;AAIR;EACI;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AASpB;EACI;;AAGJ;EACI,OejYH;EfkYG;;AAEA;EACI;EACA;EACA;EACA;EAEA;EACA,Ye3YP;Ef4YO;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;EAEA;EACA;EACA;;AAGI;EACI;;AAIR;EACI;EACA;EACA;;AAGJ;EACI;EACA;EACA;EACA;;AAIR;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;;AAIJ;EACI;;AAGJ;EACI;EACA;;AAKR;EACI;;AAKZ;EACI;;AAIR;EACI;;AAKZ;EACI;EACA;EACA,Oe1eC;Ef2eD;EACA;EACA;EACA;EACA;;AAIQ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;EAGI;;AAIR;EACI;EACA;;AAEA;EACI;EACA;;AAGJ;EACI;;AAEA;EACI;EACA;;AAIR;EACI;;AAGJ;EACI;EACA;EACA;EACA;;AAEA;EACI;EACA;;AAGJ;EACI;EACA;;AAGJ;EACI;EACA;;AAGJ;EACI;;AAKZ;EACI;;AAKZ;EACI;;AAGJ;EACI;;AAMR;EAEI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;;AAGJ;EACI;;AAGJ;EACI;EACA;;AAEA;EACI;;AAIR;EACI;;AAEA;EACI;;AAKJ;EACI;EACA;EACA;EACA;EACA;;AAIR;EACI;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;;AAKZ;EACI;EACA;;AAIR;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;AAIR;EACI;EACA;;AAGJ;EACI;;AAGJ;EACI;EACA;;AAKZ;EACI;EACA;EACA;EACA;EACA;EACA;;AAGJ;EACI;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;;AAIR;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA,Oe9wBJ;Ef+wBI;EACA;EACA;EACA;EACA;EACA;;AAGJ;EAEI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA,OenyBP;EfoyBO;EACA;;AAIR;EACI;EACA;;AAGA;EACI;;AAGJ;EACI;;AAGJ;EACI;EACA;EAEA;;AAMA;EACI,Oej0BX;Efk0BW;EACA;EACA;EACA;EACA;EACA;EACA,Yex0BX;Efy0BW;EACA;;AAEA;EACI;;AAIR;EACI;EACA;EACA;EACA;EACA;EACA;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAMA;EACI;;AAOJ;EACI;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA,Oe/2BnB;Efg3BmB;EACA;;AAKR;EACI;EACA;EACA;EACA,OAl2BI;EAm2BJ,QAn2BI;EAo2BJ,Oe53Bf;Ef63Be;EACA;EACA;EACA;AAsBA;AAAA;AAAA;;AApBA;EACI;EACA;;AAIJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAKJ;EACI;;AAGJ;EACI;;AAEA;EACI;;AAIR;EACI;;AAGJ;EACI;EACA;;AAGJ;EACI;;AAGJ;EACI;EACA;;AAEA;EACI;EACA;;AAGJ;EACI;;AAEA;EACI;;AAOR;EACI;EACA;EACA;;AAEA;EACI;EACA;;AAKJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;AAIR;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGJ;EACI;;AAIR;EACI;;AAKJ;EACI;;AAIR;EACI;;AAEA;EACI;;AAGJ;EACI;;AAQJ;EACI;;AAIR;EACI;;AAKZ;EACI;;AAIR;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA,OejjCX;EfkjCW;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGJ;EACI;EACA;;AAEA;EACI;EACA;;AAGJ;EACI,OezkCf;Ef0kCe;EACA;EACA;EACA;EACA;;AAEA;EACI;;AAGJ;EACI,OerlCnB;EfslCmB;EACA;EACA;EACA;EACA;EACA,Ye3lCnB;Ef4lCmB;EACA;EACA;EACA;;AAEA;EACI;;AAUpB;EACI;EACA;EACA;;AAGJ;EACI;EACA;EACA;;AAEA;EACI;;AAGJ;AACI;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAaA;;AAQA;EACI;;AAMA;EACI;;AAEA;EACI;;AAMR;EACI;;AAYhB;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGI;EACI;EACA;;AAKJ;EACI;EACA;;AAIR;EACI;EACA;EACA;;AAIR;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;;AAGJ;EACI;EACA;;AAIR;EACI;EACA;;AAEA;EACI;;;AAQxB;EACI;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;;AAGA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;;AAGJ;EACI;EACA;EACA;EACA;;AAIR;EACI;EACA;EACA;EACA;EACA;;AAII;EACI;;AAGJ;EACI;;AAIR;EACI;;AAGJ;EACI;EAEA;EACA;EACA;EACA;EACA;EAEA;EACA;EACA;EACA;;AAEA;AACI;AAAA;AAAA;AAAA;AAAA;EAKA;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;;AAIR;AACI;AAAA;AAAA;AAAA;EAIA;;AAMR;EACI;EACA;EACA;;AAGA;EACI;EACA;;AAGJ;EACI;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;;AAMhB;EAEI;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;;AAOJ;EACI;;AAMA;EACI;;AAGJ;EACI;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAOpB;EACI;EACA;EACA;;AAEA;EACI;EACA,Ye19CP;Ef29CO;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;;AAIA;EACI;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI,Ye1/CnB;Ef2/CmB;EACA;;AAGJ;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;;AAKZ;EACI;EACA;EACA;EACA;;AAKA;EACI;EACA;;AAGJ;EACI;EACA;EACA,Ye1iDpB;Ef2iDoB;;AAIR;EACI,YejjDnB;EfkjDmB;EACA;EACA;EACA;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA,Oe3kDpB;Ef4kDoB;EACA;EACA;;AAMhB;AACI;AAAA;AAAA;AAAA;EAIA;;AAGJ;EACI;;AAGJ;EACI;EACA,YenmDX;EfomDW;EACA;EACA;;AAIR;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;AAIR;EACI;EACA;EACA;EACA;EACA;EACA;EAEA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;;AAKZ;EACI;;AAGJ;EACI;;AAKJ;EACI;EACA;EACA;EACA;;AAQA;EACI;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;;AAGJ;EACI;;AAGJ;EACI;;AAGJ;EACI;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;;AAGJ;EACI;;;AAS5B;AAEA;EAEI;IACI;IACA;;EAGJ;IACI;;EAGJ;IACI;IACA;;EAGJ;IACI;;EAEA;IACI;;EAIR;IACI;;EAGJ;IACI;IACA;;EAGJ;IACI;IACA;;EAGJ;IACI;;EAGJ;IACI;;EAIA;IACI;;EAGR;IACI;;EAGA;IACI;;;AAIZ;AACA;EAGY;IACI;;EAKZ;IACI;;EAEA;IACI;;EAGJ;IACI;;EAIR;IACI;IACA;;EAOA;IACI;IACA;IAEA;;EAEA;IACI;;EAGJ;IACI;IAEA;IACA;IACA;;EAGA;IACI;IACA;IACA;IACA;;EAGJ;IACI,Ye31DX;If41DW;IACA;;EAGA;IACI;;EAGJ;IACI;;EAGJ;IACI;;EAGJ;IACI;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAEA;IACI;IACA,Yez3DnB;If03DmB;IACA;;EAEA;IACI;IACA,Oe/3DvB;Ifg4DuB;IACA;;EAGJ;IACI;IACA,Oer4DpB;Ifs4DoB;IACA;;EAIR;IACI;IACA;IACA;IACA;;EAIA;IACI;IACA;IACA;IACA;IACA;IACA;;EAOpB;IACI;IACA;IAEA;IACA;IAEA;;EAEA;IACI;IACA;IACA;IACA;IACA;;EAGJ;IACI;IACA;IACA;IACA;;EAEA;IACI;;EAGJ;IACI;;EAKJ;IACI;IACA;IACA;IACA;IACA;IACA;IACA;IACA,Ye18Df;If28De;IACA;IACA;;EAKZ;IACI;IACA;IACA;IACA;IAGA;IACA;IACA;;EAEA;IACI;IACA;IACA;IACA;IACA;;EAIJ;IACI;;EAGJ;IACI;IACA;IACA;IACA;;EAEA;IACI;IACA;IACA;;EAOZ;IACI;IACA;IAGA;IACA;IACA;;EAGI;IACI;;EAKZ;IACI;IAGA;IACA;;EAGI;IACI;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAGJ;IACI;;EAKR;IACI;IACA;IACA;;EAGA;IACI;IACA;IACA;;EAGJ;IACI;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAEA;IACI;;EAGJ;IACI;IACA;IACA;IAGI;;EAGJ;IACI;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAGJ;IACI;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAQxB;IACI;;EAIR;IACI;;EAGJ;IACI;;EAEA;IACI;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAEA;IACI;;EAGJ;IACI;IACA;IACA;IACA;;EAEA;IACI;IACA;IACA;IACA;IACA;;EAEA;IACI;IACA;;EAEA;IACI;;EAIA;IACI;;EAGJ;IACI;IACA;IACA;IACA;IACA;;EAGJ;IACI;;EAGJ;IACI;;EAKZ;IACI;IACA;IACA;;EAMhB;IACI;IACA;IACA;IACA;IACA;;EAEA;IAEI;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAEA;IACI;IACA;IACA;;EAEA;IACI;IACA;;EAEA;IACI;IACA;IACA;IACA;IACA;;EAEA;IACI;;EAGJ;IACI;IACA;IACA;AACA;AAAA;AAAA;IAGA;IACA;IACA;IACA;;EAGJ;IACI;IACA;IACA;IAEA;;EAGJ;IACI;IACA;IAEA;;EAGJ;IACI;IACA;IACA;;EAMhB;IACI;IACA;;EAGJ;IACI;IACA;IACA;IACA;IACA;;EAEA;IACI;IACA;;EAEA;IACI;;EAEA;IACI;IACA;;EAEA;IACI;IACA;;EAGJ;IACI;;EAGJ;IACI;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IAcI;;EAEA;IACI;IACA;IACA;IACA;IACA;;EAKZ;IACI;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IAcI;;EAEA;IACI;IACA;IACA;IACA;IACA;;EAUpB;IACI;;EAEA;IACI;;EAII;IACI;IACA;;EAIR;IACI;IACA,QA72EL;;EA+2EK;IACI;IACA,QAj3ET;IAk3ES;;EAIR;IACI;IACA;;EAOhB;IACI;;EAGJ;IACI;IAEA;IACA;IACA;IACA;IACA;IACA;;EAEA;IACI,Oev6EnB;Ifw6EmB;IACA;IAGI;IAOJ;IACA;IACA;IACA;;EAGJ;IACI;;EAGJ;IACI;IACA;IACA;IACA;IACA;;EAMJ;IACI;;EAGJ;IACI;IACA;IACA;IACA;;EAEA;IACI;;EAGJ;IACI;;EAMhB;IACI;IACA;IACA;IACA;IACA;IACA;IACA;;EAEA;IACI;IACA;IACA;;EAGJ;IACI;IACA;IACA;IACA;IACA;IACA;IACA;;;AAoDxB;EAKY;IACI;;EAGA;IACI;;EAKZ;IACI;;EAUgB;IACI;;;AAWhC;EAEQ;IACI;;;AAKZ;EACI;IACI;;EAGJ;IACI;;;AAIR;EACI;IACI;;EAGJ;IACI;;;AAIR;EACI;IACI;;EAGJ;IACI;;;AAIR;EACI;IACI;;EAGJ;IACI;;;AAMR;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AA+EA;EACI;AACA;AAAA;AAAA;;;AAKJ;EACI;IACI;IACA;IACA;;EAGJ;IACI;IACA;IACA;;EAGJ;IACI;IACA;IACA;;;AAIR;EACI;IACI;IACA;IACA;;EAGJ;IACI;IACA;IACA;;EAGJ;IACI;IACA;IACA;;;AAIR;EACI;IACI;;;AAIR;EACI;IACI;;;AAIR;EACI;IACI;;;AAIR;EACI;IACI;;;AgBjxFP;AjBAA;EACG;EACA;EACA;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;EACA;;AAGJ;EACI;EACA;;AAGJ;EACI;EACA;;AAGJ;EACI;EACA;;AAGJ;EACI;EACA;;AAGJ;EACI;EACA;;AiBnEJ;EACI,WDDQ;;ACKA;EACI;;;AAMhB;AAIA;AAGA%22%7D */
+/* === SNIPPET DatePickerCSS ====== */
+@font-face {
+    font-family: "Simona-Regular";
+    font-display: swap;
+    src: url("fonts/Simona-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "Simona-Medium";
+    font-display: swap;
+    src: url("fonts/Simona-Medium.woff") format("woff");
+}
+
+:root{
+    --main-font-bold: 'simona-medium';
+    --hotel-choosing-border-color: #b2986b;
+    --hotel-choosing-text-color: #fff;
+--mobile-navbar-bg-color: #333;
+    --engine-bg: #333;
+    --desktop-search-button-bg: transparent;
+--desktop-search-button-text-color: #FFF;
+--desktop-search-button-border-color: #b2986b;
+    --mobile-currency-font-color: #fff;
+  --comprasion-banner-bg: #c1ad89;
+        --comprasion-banner-color: #333;
+        --hotel-info-icons-color: #333;
+    --price-plan-row-title-bg: #eee8df;
+    --beds-select-bg: #b2986b;
+    --main-color: #333;
+    --price-code-name-color: #333;
+--beds-select-color: #333;
+--room-price-color: #333;
+    --hotel-choosing-select-text-color: #535355;
+--dates-button-text-color: #535355;
+--rooms-paxs-button-text-color:#535355;
+--engine-bg: transparent;
+}
+html, body {
+    font-family: "Simona-Regular";
+}
+
+
+
+  .langs-wrap #dropdownMenuButton  path {
+    fill: #fff;
+}
+.rooms-summary .search-summary .dash {
+
+    filter: grayscale(1);
+
+}
+.rooms-summary .search-summary .slash {
+    filter: grayscale(1);
+}
+
+#booking-engine-beproc #booking-engine-holder.usePromoCodeNew .new-promocode-box {
+    left: auto;
+    color: #fff;
+}
+.hotel-room .room-overview .one-room .btn-outline-warning.OpenPrices span {
+    color: #333;
+}
+.hotelname-top .share-images svg path {
+    fill: #fff !important;
+}
+
+.hotelname-top .share-txt {
+    color: #fff;
+}
+/*********************************** Mobile *******************/
+@media (max-width: 992px) {
+body .daterangepicker .calendars-holder{position:static}
+#booking-engine-holder .engine-holder-header .book-your-stay-text {
+    display: block;
+    color: #444;
+    font-size: 22px;
+    text-align: start;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+#booking-engine-holder .engine-holder-header .discount-rate-text {
+    display: none;
+}
+
+#booking-engine-holder .engine-holder-header {
+    background-color: rgba(0,0,0,0);
+    margin-top: 25px;
+    height: auto;
+    justify-content: center;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder {
+    font-size: 16px;
+    padding-right: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background-color: #fff;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder {
+    display: flex;
+    text-align: right;
+    font-size: 1.125rem;
+    font-family: "simona";
+    background: #fff;
+    align-items: center;
+    height: 54px;
+    background: url(images/selectarrow.png) no-repeat center left 12px #fff;
+}
+#booking-engine-holder .engine-holder .resort-holder {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+#booking-engine-holder .engine-holder .dates-holder {
+    display: flex;
+    position: relative;
+    font-family: "simona";
+    color: #616161;
+    font-size: 1rem;
+    width: 100%;
+    margin: 10px auto 10px auto;
+    background-color: #fff;
+    background: url(images/selectarrow.png) no-repeat center left 12px #fff;
+    height: 54px;
+    align-items: center;
+    flex-grow: .5;
+}
+#booking-engine-holder .engine-holder .promocode-mobile {
+    display: none;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder,
+#booking-engine-holder .engine-holder .dates-holder,
+#booking-engine-holder .engine-holder .rooms-paxs-summery-holder .rooms-paxs-summery{
+    font-size: 16px;
+}
+
+#booking-engine-holder {
+    width: 100%;
+    background: #f5f5f5;
+}
+#booking-engine-holder .engine-holder .bottom-engine-holder .search-button {
+    background-color: #b2986b !important;
+    color: #fff !important;
+    border-radius: 2px !important;
+    border-color: #b2986b !important;
+}
+#booking-engine-holder .engine-holder .bottom-engine-holder .engine-button-row .search-button {
+    box-shadow: 0 0 0 0 rgba(178,152,107,.7);
+}
+#booking-engine-holder .simplex-main-engine-holder .engine-holder .bottom-engine-holder .search-button {
+    border: none;
+    border-radius: 2px;
+    height: 50px;
+    border: 2px solid #b2986b;
+    color: #fff;
+    font-size: 25px;
+    font-family: "simona-medium";
+}
+.new-promocode-box {
+    text-align: left;
+    margin-top: 15px;
+}
+}
+/*********************************** Desktop *******************/
+@media (min-width: 991px) {
+#booking-engine-holder .engine-holder .resort-holder{
+position: relative;
+}
+
+#booking-engine-holder .simplex-main-engine-holder .engine-holder .resort-holder #SelectHotelHolder #ddlHotels .all-hotel-select.region47 {
+    display: none !important;
+}
+#booking-engine-holder .simplex-main-engine-holder .engine-holder .resort-holder #SelectHotelHolder #ddlHotels {
+    max-width: 100%;
+    min-height: 48vh;
+    flex-direction: column;
+}
+#booking-engine-holder .simplex-main-engine-holder .engine-holder .resort-holder #SelectHotelHolder #ddlHotels .chooser-header {
+    max-height: 30px;
+}
+#booking-engine-holder .simplex-main-engine-holder .engine-holder .resort-holder #SelectHotelHolder #ddlHotels .hotels-list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 15px;
+    padding: 0;
+}
+#booking-engine-holder .simplex-main-engine-holder .engine-holder .resort-holder #SelectHotelHolder #ddlHotels .hotel-select {
+    max-width: 100%;
+    max-height: 30px;
+    padding: 0;
+}
+#booking-engine-holder .engine-holder .resort-holder #SelectHotelHolder .hotels-div.row .hotel-select .hotelName {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    white-space: nowrap;
+    border: none;
+    background-color: transparent;
+}
+
+.hotel-room.room-row:hover {
+    border: 2px solid #B2986B;
+}
+.rooms-summary .share-images {
+    filter: grayscale(1);
+}
+#booking-engine-holder .simplex-main-engine-holder .engine-holder .resort-holder #SelectHotelHolder:hover {
+    border-color: #B2986B;
+    border-width: 2px;
+}
+#booking-engine-holder .engine-holder .dates-holder:hover {
+    border-color: #B2986B;
+    border-width: 2px;
+}
+#booking-engine-holder .simplex-main-engine-holder .engine-holder .rooms-paxs-summery-holder:hover {
+    border-color: #B2986B;
+    border-width: 2px;
+}
+#booking-engine-holder .engine-holder .check-in-date{
+border: none;
+}
+#booking-engine-holder .engine-holder .check-out-date{
+border: none;
+}
+#booking-engine-holder .engine-holder .dates-holder .dates-dispaly .dates-sep {
+     height: 35px;
+}
+#booking-engine-holder .engine-holder .dates-holder {
+
+    border: solid 1px;
+}
+#booking-engine-beproc #booking-engine-holder.usePromoCodeNew .engine-holder .bottom-engine-holder {
+    width: 20%;
+}
+#booking-engine-holder .engine-holder .bottom-engine-holder .engine-button-row .search-button {
+    font-family: var(--main-font-bold);
+font-size: 25px;
+}
+#booking-engine-holder .engine-holder .dates-holder{border:none}
+    }
+
+.simplex-main-engine-holder {opacity:1!important;}
